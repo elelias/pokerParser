@@ -54,6 +54,8 @@ def parsePokerHands(tableName,handLines,connection):
 			if len(parsedDict)!=0:
 				InsertPokerHandIntoDB(tableName,parsedDict, connection)
 			parsedDict.clear()
+			actionID=0
+			actionDict={}
 		else:
 			newHand=False
 
@@ -96,16 +98,81 @@ def parsePokerHands(tableName,handLines,connection):
 		#
 		#
 		#
-		#process action
+		#process blinds
+
+		if handState =='A':
+			if 'posts' in line and 'blind' in line:
+				part=line.partition(':')
+				if part[1]!=':'
+					print 'problem partitioning',line
+				blindString=part[2]
+				bwords=blindString.split()
+				if not bwords[-1].isdigit():
+					print 'problem parsing blinds'
+
+				if 'small blind' in blindString:
+						SB=float(bwords[-1])	
+				elif 'big blind' in blindString:
+						BB=float(bwords[-1])
+				else:
+					print 'problem parsing small blind'
+
+		#
+		#process the ANTE
+		Ante=0.0
+		if handState=='A'
+			if 'posts the ante' in line:
+				anteamount=line.split()[-1]
+				if not anteamount.isdigit():
+					print 'problem parsing the ante'
+				else:	
+					Ante+=float(line.split()[-1])
+				#
+			#
+		#
+		pokerTableDict['SB']=SB
+		pokerTableDict['BB']=BB
+		pokerTableDict['Ante']=Ante
+		#
+		#
+		#process actions
 		if handState in 'PFTR':
 			semicln=line.find(':')
 			if semicln != -1:
 				testPlayerName=line[:semicln]
 				if testPlayerName in playerNameList:
+					#
+					#
 					#this is an action
-					print 'this line corresponds to an action'
-					print line
+					#
+					#
+					#
+					if not actionDict:
+						#initialize the action dictionary
+						actionDict['pot']=pokerTableDict['SB']+pokerTableDict['BB']+pokerTableDict['Ante']
+					#
+					#
+					#
+					oldPot=actionDict['pot']
 					actionDict=parseAction(line)
+					if actionDict: #is not null so it was a valid action
+						actionID+=1
+						actionDict['actionID']=actionID
+						actionDict['actionState']=handState
+					#
+					#
+					#
+					#
+					#get the contribution to the pot from the action:
+					if actionDict['action'] in ['bet','raise','call']:
+						amount=actionDict['amount']
+						assert amount!=None
+						actionDict['pot']=oldPot+amount
+					#
+					#
+					#
+					#
+					#
 					parsedDict['actionDict']=copy.deepcopy(actionDict)
 			#
 		#

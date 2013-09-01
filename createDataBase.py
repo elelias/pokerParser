@@ -15,9 +15,10 @@ def createTables():
 		sqlstring='CREATE TABLE IF NOT EXISTS actions('
 		sqlstring+='handID BIGINT, '
 		sqlstring+='actionID SMALLINT,'
-		sqlstring+='activePlayer VARCHAR(20), '		
+		sqlstring+='actingPlayer VARCHAR(20), '		
 		sqlstring+='handState VARCHAR(1), '
 		sqlstring+='action VARCHAR(1), '
+		sqlstring+='isAllIn TIYINT, '		
 		sqlstring+='amount DECIMAL(6,2), '
 		sqlstring+='pot DECIMAL(6,2), '
 		sqlstring+='PRIMARY KEY(handID,actionID)'	
@@ -41,6 +42,19 @@ def createTables():
 		cur.execute(sqlstring)
 		rows=cur.fetchone()
 		print rows
+
+		sqlstring='CREATE TABLE IF NOT EXISTS players('
+		sqlstring+='playerID VARCHAR(20), '
+		sqlstring+='handID BIGINT, '
+		sqlstring+='playerPOS SMALLINT, '
+		sqlstring+='stack DECIMAL(10,2),'
+		sqlstring+='PRIMARY KEY(playerID,handID)'
+		sqlstring+=');'
+		print sqlstring
+		cur.execute(sqlstring)
+		rows=cur.fetchone()
+		print rows
+
 
 
 
