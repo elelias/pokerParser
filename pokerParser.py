@@ -46,6 +46,7 @@ def parsePokerHands(tableName,handLines,connection):
 
 	parsedDict={}
 	pokerTableDict={}
+	oldLine=''
 	for line in handLines:
 
 		if 'PokerStars Hand' in line:
@@ -56,6 +57,10 @@ def parsePokerHands(tableName,handLines,connection):
 			parsedDict.clear()
 			actionID=0
 			actionDict={}
+			SB=-1.0
+			BB=-1.0
+			Ante=-1.0
+			anteSum=0.0
 		else:
 			newHand=False
 
@@ -103,7 +108,7 @@ def parsePokerHands(tableName,handLines,connection):
 		if handState =='A':
 			if 'posts' in line and 'blind' in line:
 				part=line.partition(':')
-				if part[1]!=':'
+				if part[1]!=':':
 					print 'problem partitioning',line
 				blindString=part[2]
 				bwords=blindString.split()
@@ -116,23 +121,31 @@ def parsePokerHands(tableName,handLines,connection):
 						BB=float(bwords[-1])
 				else:
 					print 'problem parsing small blind'
-
 		#
 		#process the ANTE
-		Ante=0.0
-		if handState=='A'
+
+		if handState=='A':
 			if 'posts the ante' in line:
 				anteamount=line.split()[-1]
 				if not anteamount.isdigit():
 					print 'problem parsing the ante'
 				else:	
-					Ante+=float(line.split()[-1])
+					anteSum+=float(line.split()[-1])
 				#
 			#
+			if (not 'posts the ante' in line) and ('posts the ante' in oldLine):
+				#done with ante
+				Ante=anteSum
 		#
-		pokerTableDict['SB']=SB
-		pokerTableDict['BB']=BB
-		pokerTableDict['Ante']=Ante
+		if (Ante!=-1 or BB != -1):
+			#
+			pokerTableDict['SB']=SB
+			pokerTableDict['BB']=BB
+			pokerTableDict['Ante']=Ante
+		#
+		#
+		#
+		#
 		#
 		#
 		#process actions
@@ -147,13 +160,11 @@ def parsePokerHands(tableName,handLines,connection):
 					#
 					#
 					#
+					#initialize the action dictionary
 					if not actionDict:
-						#initialize the action dictionary
 						actionDict['pot']=pokerTableDict['SB']+pokerTableDict['BB']+pokerTableDict['Ante']
-					#
-					#
-					#
 					oldPot=actionDict['pot']
+
 					actionDict=parseAction(line)
 					if actionDict: #is not null so it was a valid action
 						actionID+=1
@@ -168,6 +179,8 @@ def parsePokerHands(tableName,handLines,connection):
 						amount=actionDict['amount']
 						assert amount!=None
 						actionDict['pot']=oldPot+amount
+					else:
+						actionDict['pot']=oldPots
 					#
 					#
 					#
@@ -175,10 +188,7 @@ def parsePokerHands(tableName,handLines,connection):
 					#
 					parsedDict['actionDict']=copy.deepcopy(actionDict)
 			#
-		#
-		#
-		#
-		#
+		oldLine=line
 
 
 

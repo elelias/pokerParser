@@ -26,10 +26,10 @@ def InsertPokerHandIntoDB(tableName,parsedDict,connection):
 	execute_string+=';'
 	print 'the string is',execute_string
 	raw_input()
-	#cur=connection.cursor()
-	#cur.execute(execute_string)
-	#connection.commit()
-	#rows=cur.fetchall()
-	#for row in rows:
-	#	print row
+	cur=connection.cursor()
+	cur.execute(execute_string)
+	connection.commit()
+	rows=cur.fetchall()
+	for row in rows:
+		print row
 

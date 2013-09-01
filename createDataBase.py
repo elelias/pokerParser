@@ -18,7 +18,7 @@ def createTables():
 		sqlstring+='actingPlayer VARCHAR(20), '		
 		sqlstring+='handState VARCHAR(1), '
 		sqlstring+='action VARCHAR(1), '
-		sqlstring+='isAllIn TIYINT, '		
+		sqlstring+='isAsllIn TIYINT, '		
 		sqlstring+='amount DECIMAL(6,2), '
 		sqlstring+='pot DECIMAL(6,2), '
 		sqlstring+='PRIMARY KEY(handID,actionID)'	
