@@ -1,0 +1,1115 @@
+﻿PokerStars Hand #103304318503: Tournament #779951772, $3.16+$0.34 USD Hold'em No Limit - Level I (10/20) - 2013/08/27 13:23:48 ET
+Table '779951772 1' 9-max Seat #1 is the button
+Seat 1: champion719 (1500 in chips) 
+Seat 2: Ty4ur$s (1500 in chips) 
+Seat 3: eimaise (1500 in chips) 
+Seat 4: Taró 38 (1500 in chips) 
+Seat 5: ms1272 (1500 in chips) 
+Seat 6: elelias01 (1500 in chips) 
+Seat 7: Ramen9 (1500 in chips) 
+Seat 8: uwodropout (1500 in chips) 
+Seat 9: antimamalos (1500 in chips) 
+Ty4ur$s: posts small blind 10
+eimaise: posts big blind 20
+*** HOLE CARDS ***
+Dealt to elelias01 [5d 6h]
+Taró 38: folds 
+ms1272: folds 
+elelias01: folds 
+Ramen9: raises 40 to 60
+uwodropout: folds 
+antimamalos: folds 
+champion719: folds 
+Ty4ur$s: folds 
+eimaise: folds 
+Uncalled bet (40) returned to Ramen9
+Ramen9 collected 50 from pot
+*** SUMMARY ***
+Total pot 50 | Rake 0 
+Seat 1: champion719 (button) folded before Flop (didn't bet)
+Seat 2: Ty4ur$s (small blind) folded before Flop
+Seat 3: eimaise (big blind) folded before Flop
+Seat 4: Taró 38 folded before Flop (didn't bet)
+Seat 5: ms1272 folded before Flop (didn't bet)
+Seat 6: elelias01 folded before Flop (didn't bet)
+Seat 7: Ramen9 collected (50)
+Seat 8: uwodropout folded before Flop (didn't bet)
+Seat 9: antimamalos folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #103304348437: Tournament #779951772, $3.16+$0.34 USD Hold'em No Limit - Level I (10/20) - 2013/08/27 13:24:26 ET
+Table '779951772 1' 9-max Seat #2 is the button
+Seat 1: champion719 (1500 in chips) 
+Seat 2: Ty4ur$s (1490 in chips) 
+Seat 3: eimaise (1480 in chips) 
+Seat 4: Taró 38 (1500 in chips) 
+Seat 5: ms1272 (1500 in chips) 
+Seat 6: elelias01 (1500 in chips) 
+Seat 7: Ramen9 (1530 in chips) 
+Seat 8: uwodropout (1500 in chips) 
+Seat 9: antimamalos (1500 in chips) 
+eimaise: posts small blind 10
+Taró 38: posts big blind 20
+*** HOLE CARDS ***
+Dealt to elelias01 [8s 3c]
+ms1272: folds 
+elelias01: folds 
+Ramen9: folds 
+uwodropout: folds 
+antimamalos: raises 60 to 80
+champion719: folds 
+Ty4ur$s: folds 
+eimaise: folds 
+Taró 38: folds 
+Uncalled bet (60) returned to antimamalos
+antimamalos collected 50 from pot
+*** SUMMARY ***
+Total pot 50 | Rake 0 
+Seat 1: champion719 folded before Flop (didn't bet)
+Seat 2: Ty4ur$s (button) folded before Flop (didn't bet)
+Seat 3: eimaise (small blind) folded before Flop
+Seat 4: Taró 38 (big blind) folded before Flop
+Seat 5: ms1272 folded before Flop (didn't bet)
+Seat 6: elelias01 folded before Flop (didn't bet)
+Seat 7: Ramen9 folded before Flop (didn't bet)
+Seat 8: uwodropout folded before Flop (didn't bet)
+Seat 9: antimamalos collected (50)
+
+
+
+PokerStars Hand #103304373483: Tournament #779951772, $3.16+$0.34 USD Hold'em No Limit - Level I (10/20) - 2013/08/27 13:24:58 ET
+Table '779951772 1' 9-max Seat #3 is the button
+Seat 1: champion719 (1500 in chips) 
+Seat 2: Ty4ur$s (1490 in chips) 
+Seat 3: eimaise (1470 in chips) 
+Seat 4: Taró 38 (1480 in chips) 
+Seat 5: ms1272 (1500 in chips) 
+Seat 6: elelias01 (1500 in chips) 
+Seat 7: Ramen9 (1530 in chips) 
+Seat 8: uwodropout (1500 in chips) 
+Seat 9: antimamalos (1530 in chips) 
+Taró 38: posts small blind 10
+ms1272: posts big blind 20
+*** HOLE CARDS ***
+Dealt to elelias01 [9c 3d]
+elelias01: folds 
+Ramen9: folds 
+uwodropout: folds 
+antimamalos: folds 
+champion719: folds 
+Ty4ur$s: folds 
+eimaise: calls 20
+Taró 38: raises 60 to 80
+ms1272: folds 
+eimaise: calls 60
+*** FLOP *** [7d Kd Ks]
+Taró 38: bets 60
+eimaise: folds 
+Uncalled bet (60) returned to Taró 38
+Taró 38 collected 180 from pot
+*** SUMMARY ***
+Total pot 180 | Rake 0 
+Board [7d Kd Ks]
+Seat 1: champion719 folded before Flop (didn't bet)
+Seat 2: Ty4ur$s folded before Flop (didn't bet)
+Seat 3: eimaise (button) folded on the Flop
+Seat 4: Taró 38 (small blind) collected (180)
+Seat 5: ms1272 (big blind) folded before Flop
+Seat 6: elelias01 folded before Flop (didn't bet)
+Seat 7: Ramen9 folded before Flop (didn't bet)
+Seat 8: uwodropout folded before Flop (didn't bet)
+Seat 9: antimamalos folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #103304398816: Tournament #779951772, $3.16+$0.34 USD Hold'em No Limit - Level I (10/20) - 2013/08/27 13:25:31 ET
+Table '779951772 1' 9-max Seat #4 is the button
+Seat 1: champion719 (1500 in chips) 
+Seat 2: Ty4ur$s (1490 in chips) 
+Seat 3: eimaise (1390 in chips) 
+Seat 4: Taró 38 (1580 in chips) 
+Seat 5: ms1272 (1480 in chips) 
+Seat 6: elelias01 (1500 in chips) 
+Seat 7: Ramen9 (1530 in chips) 
+Seat 8: uwodropout (1500 in chips) 
+Seat 9: antimamalos (1530 in chips) 
+ms1272: posts small blind 10
+elelias01: posts big blind 20
+*** HOLE CARDS ***
+Dealt to elelias01 [3c Th]
+Ramen9: folds 
+uwodropout: folds 
+antimamalos: folds 
+champion719: raises 20 to 40
+Ty4ur$s: folds 
+eimaise: folds 
+Taró 38: folds 
+ms1272: folds 
+elelias01: folds 
+Uncalled bet (20) returned to champion719
+champion719 collected 50 from pot
+champion719: doesn't show hand 
+*** SUMMARY ***
+Total pot 50 | Rake 0 
+Seat 1: champion719 collected (50)
+Seat 2: Ty4ur$s folded before Flop (didn't bet)
+Seat 3: eimaise folded before Flop (didn't bet)
+Seat 4: Taró 38 (button) folded before Flop (didn't bet)
+Seat 5: ms1272 (small blind) folded before Flop
+Seat 6: elelias01 (big blind) folded before Flop
+Seat 7: Ramen9 folded before Flop (didn't bet)
+Seat 8: uwodropout folded before Flop (didn't bet)
+Seat 9: antimamalos folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #103304415183: Tournament #779951772, $3.16+$0.34 USD Hold'em No Limit - Level I (10/20) - 2013/08/27 13:25:52 ET
+Table '779951772 1' 9-max Seat #5 is the button
+Seat 1: champion719 (1530 in chips) 
+Seat 2: Ty4ur$s (1490 in chips) 
+Seat 3: eimaise (1390 in chips) 
+Seat 4: Taró 38 (1580 in chips) 
+Seat 5: ms1272 (1470 in chips) 
+Seat 6: elelias01 (1480 in chips) 
+Seat 7: Ramen9 (1530 in chips) 
+Seat 8: uwodropout (1500 in chips) 
+Seat 9: antimamalos (1530 in chips) 
+elelias01: posts small blind 10
+Ramen9: posts big blind 20
+*** HOLE CARDS ***
+Dealt to elelias01 [Ts Kc]
+uwodropout: folds 
+antimamalos: folds 
+champion719: folds 
+Ty4ur$s: folds 
+eimaise: folds 
+Taró 38: folds 
+ms1272: folds 
+elelias01: raises 20 to 40
+Ramen9: folds 
+Uncalled bet (20) returned to elelias01
+elelias01 collected 40 from pot
+*** SUMMARY ***
+Total pot 40 | Rake 0 
+Seat 1: champion719 folded before Flop (didn't bet)
+Seat 2: Ty4ur$s folded before Flop (didn't bet)
+Seat 3: eimaise folded before Flop (didn't bet)
+Seat 4: Taró 38 folded before Flop (didn't bet)
+Seat 5: ms1272 (button) folded before Flop (didn't bet)
+Seat 6: elelias01 (small blind) collected (40)
+Seat 7: Ramen9 (big blind) folded before Flop
+Seat 8: uwodropout folded before Flop (didn't bet)
+Seat 9: antimamalos folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #103304444072: Tournament #779951772, $3.16+$0.34 USD Hold'em No Limit - Level I (10/20) - 2013/08/27 13:26:29 ET
+Table '779951772 1' 9-max Seat #6 is the button
+Seat 1: champion719 (1530 in chips) 
+Seat 2: Ty4ur$s (1490 in chips) 
+Seat 3: eimaise (1390 in chips) 
+Seat 4: Taró 38 (1580 in chips) 
+Seat 5: ms1272 (1470 in chips) 
+Seat 6: elelias01 (1500 in chips) 
+Seat 7: Ramen9 (1510 in chips) 
+Seat 8: uwodropout (1500 in chips) 
+Seat 9: antimamalos (1530 in chips) 
+Ramen9: posts small blind 10
+uwodropout: posts big blind 20
+*** HOLE CARDS ***
+Dealt to elelias01 [Th 8h]
+antimamalos: folds 
+champion719: folds 
+Ty4ur$s: folds 
+eimaise: folds 
+Taró 38: raises 40 to 60
+ms1272: folds 
+elelias01: folds 
+Ramen9: calls 50
+uwodropout: calls 40
+*** FLOP *** [8d 4s Qd]
+Ramen9: checks 
+uwodropout: checks 
+Taró 38: bets 100
+Ramen9: raises 200 to 300
+uwodropout: folds 
+Taró 38: calls 200
+*** TURN *** [8d 4s Qd] [As]
+Ramen9: checks 
+Taró 38: bets 180
+Ramen9: raises 970 to 1150 and is all-in
+Taró 38: folds 
+Uncalled bet (970) returned to Ramen9
+Ramen9 collected 1140 from pot
+*** SUMMARY ***
+Total pot 1140 | Rake 0 
+Board [8d 4s Qd As]
+Seat 1: champion719 folded before Flop (didn't bet)
+Seat 2: Ty4ur$s folded before Flop (didn't bet)
+Seat 3: eimaise folded before Flop (didn't bet)
+Seat 4: Taró 38 folded on the Turn
+Seat 5: ms1272 folded before Flop (didn't bet)
+Seat 6: elelias01 (button) folded before Flop (didn't bet)
+Seat 7: Ramen9 (small blind) collected (1140)
+Seat 8: uwodropout (big blind) folded on the Flop
+Seat 9: antimamalos folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #103304533025: Tournament #779951772, $3.16+$0.34 USD Hold'em No Limit - Level I (10/20) - 2013/08/27 13:28:24 ET
+Table '779951772 1' 9-max Seat #7 is the button
+Seat 1: champion719 (1530 in chips) 
+Seat 2: Ty4ur$s (1490 in chips) 
+Seat 3: eimaise (1390 in chips) 
+Seat 4: Taró 38 (1040 in chips) 
+Seat 5: ms1272 (1470 in chips) 
+Seat 6: elelias01 (1500 in chips) 
+Seat 7: Ramen9 (2110 in chips) 
+Seat 8: uwodropout (1440 in chips) 
+Seat 9: antimamalos (1530 in chips) 
+uwodropout: posts small blind 10
+antimamalos: posts big blind 20
+*** HOLE CARDS ***
+Dealt to elelias01 [9s 8c]
+champion719: raises 20 to 40
+Ty4ur$s: calls 40
+eimaise: folds 
+Taró 38: folds 
+ms1272: folds 
+elelias01: calls 40
+Ramen9: folds 
+uwodropout: folds 
+antimamalos: calls 20
+*** FLOP *** [Qh 6h 5d]
+antimamalos has timed out
+antimamalos: checks 
+champion719: bets 100
+Ty4ur$s: folds 
+elelias01: folds 
+antimamalos: folds 
+Uncalled bet (100) returned to champion719
+champion719 collected 170 from pot
+champion719: doesn't show hand 
+*** SUMMARY ***
+Total pot 170 | Rake 0 
+Board [Qh 6h 5d]
+Seat 1: champion719 collected (170)
+Seat 2: Ty4ur$s folded on the Flop
+Seat 3: eimaise folded before Flop (didn't bet)
+Seat 4: Taró 38 folded before Flop (didn't bet)
+Seat 5: ms1272 folded before Flop (didn't bet)
+Seat 6: elelias01 folded on the Flop
+Seat 7: Ramen9 (button) folded before Flop (didn't bet)
+Seat 8: uwodropout (small blind) folded before Flop
+Seat 9: antimamalos (big blind) folded on the Flop
+
+
+
+PokerStars Hand #103304592238: Tournament #779951772, $3.16+$0.34 USD Hold'em No Limit - Level II (15/30) - 2013/08/27 13:29:41 ET
+Table '779951772 1' 9-max Seat #8 is the button
+Seat 1: champion719 (1660 in chips) 
+Seat 2: Ty4ur$s (1450 in chips) 
+Seat 3: eimaise (1390 in chips) 
+Seat 4: Taró 38 (1040 in chips) 
+Seat 5: ms1272 (1470 in chips) 
+Seat 6: elelias01 (1460 in chips) 
+Seat 7: Ramen9 (2110 in chips) 
+Seat 8: uwodropout (1430 in chips) 
+Seat 9: antimamalos (1490 in chips) 
+antimamalos: posts small blind 15
+champion719: posts big blind 30
+*** HOLE CARDS ***
+Dealt to elelias01 [Ah Ks]
+Ty4ur$s: folds 
+eimaise: folds 
+Taró 38: folds 
+ms1272: folds 
+elelias01: raises 30 to 60
+Ramen9: raises 2050 to 2110 and is all-in
+uwodropout: folds 
+antimamalos: folds 
+champion719: folds 
+elelias01: calls 1400 and is all-in
+Uncalled bet (650) returned to Ramen9
+*** FLOP *** [6s Kd 9d]
+*** TURN *** [6s Kd 9d] [8d]
+*** RIVER *** [6s Kd 9d 8d] [2h]
+*** SHOW DOWN ***
+elelias01: shows [Ah Ks] (a pair of Kings)
+Ramen9: shows [5d 5h] (a pair of Fives)
+elelias01 collected 2965 from pot
+*** SUMMARY ***
+Total pot 2965 | Rake 0 
+Board [6s Kd 9d 8d 2h]
+Seat 1: champion719 (big blind) folded before Flop
+Seat 2: Ty4ur$s folded before Flop (didn't bet)
+Seat 3: eimaise folded before Flop (didn't bet)
+Seat 4: Taró 38 folded before Flop (didn't bet)
+Seat 5: ms1272 folded before Flop (didn't bet)
+Seat 6: elelias01 showed [Ah Ks] and won (2965) with a pair of Kings
+Seat 7: Ramen9 showed [5d 5h] and lost with a pair of Fives
+Seat 8: uwodropout (button) folded before Flop (didn't bet)
+Seat 9: antimamalos (small blind) folded before Flop
+
+
+
+PokerStars Hand #103304631059: Tournament #779951772, $3.16+$0.34 USD Hold'em No Limit - Level II (15/30) - 2013/08/27 13:30:31 ET
+Table '779951772 1' 9-max Seat #9 is the button
+Seat 1: champion719 (1630 in chips) 
+Seat 2: Ty4ur$s (1450 in chips) 
+Seat 3: eimaise (1390 in chips) 
+Seat 4: Taró 38 (1040 in chips) 
+Seat 5: ms1272 (1470 in chips) 
+Seat 6: elelias01 (2965 in chips) 
+Seat 7: Ramen9 (650 in chips) 
+Seat 8: uwodropout (1430 in chips) 
+Seat 9: antimamalos (1475 in chips) 
+champion719: posts small blind 15
+Ty4ur$s: posts big blind 30
+*** HOLE CARDS ***
+Dealt to elelias01 [3c Ac]
+eimaise: folds 
+Taró 38: folds 
+ms1272: folds 
+elelias01: calls 30
+Ramen9: folds 
+uwodropout: folds 
+antimamalos: calls 30
+champion719: calls 15
+Ty4ur$s: checks 
+*** FLOP *** [6h 5d 9h]
+champion719: checks 
+Ty4ur$s: checks 
+elelias01: bets 80
+antimamalos: calls 80
+champion719: folds 
+Ty4ur$s: folds 
+*** TURN *** [6h 5d 9h] [7c]
+elelias01: checks 
+antimamalos: checks 
+*** RIVER *** [6h 5d 9h 7c] [6d]
+elelias01: bets 150
+antimamalos: raises 270 to 420
+elelias01: folds 
+Uncalled bet (270) returned to antimamalos
+antimamalos collected 580 from pot
+*** SUMMARY ***
+Total pot 580 | Rake 0 
+Board [6h 5d 9h 7c 6d]
+Seat 1: champion719 (small blind) folded on the Flop
+Seat 2: Ty4ur$s (big blind) folded on the Flop
+Seat 3: eimaise folded before Flop (didn't bet)
+Seat 4: Taró 38 folded before Flop (didn't bet)
+Seat 5: ms1272 folded before Flop (didn't bet)
+Seat 6: elelias01 folded on the River
+Seat 7: Ramen9 folded before Flop (didn't bet)
+Seat 8: uwodropout folded before Flop (didn't bet)
+Seat 9: antimamalos (button) collected (580)
+
+
+
+PokerStars Hand #103304691725: Tournament #779951772, $3.16+$0.34 USD Hold'em No Limit - Level II (15/30) - 2013/08/27 13:31:49 ET
+Table '779951772 1' 9-max Seat #1 is the button
+Seat 1: champion719 (1600 in chips) 
+Seat 2: Ty4ur$s (1420 in chips) 
+Seat 3: eimaise (1390 in chips) 
+Seat 4: Taró 38 (1040 in chips) 
+Seat 5: ms1272 (1470 in chips) 
+Seat 6: elelias01 (2705 in chips) 
+Seat 7: Ramen9 (650 in chips) 
+Seat 8: uwodropout (1430 in chips) 
+Seat 9: antimamalos (1795 in chips) 
+Ty4ur$s: posts small blind 15
+eimaise: posts big blind 30
+*** HOLE CARDS ***
+Dealt to elelias01 [Ah As]
+Taró 38 has timed out
+Taró 38: folds 
+Taró 38 is sitting out
+ms1272: folds 
+elelias01: raises 30 to 60
+Ramen9: folds 
+Taró 38 has returned
+uwodropout: folds 
+antimamalos: folds 
+champion719: folds 
+Ty4ur$s: folds 
+eimaise: folds 
+Uncalled bet (30) returned to elelias01
+elelias01 collected 75 from pot
+elelias01: shows [Ah As] (a pair of Aces)
+*** SUMMARY ***
+Total pot 75 | Rake 0 
+Seat 1: champion719 (button) folded before Flop (didn't bet)
+Seat 2: Ty4ur$s (small blind) folded before Flop
+Seat 3: eimaise (big blind) folded before Flop
+Seat 4: Taró 38 folded before Flop (didn't bet)
+Seat 5: ms1272 folded before Flop (didn't bet)
+Seat 6: elelias01 collected (75)
+Seat 7: Ramen9 folded before Flop (didn't bet)
+Seat 8: uwodropout folded before Flop (didn't bet)
+Seat 9: antimamalos folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #103304719840: Tournament #779951772, $3.16+$0.34 USD Hold'em No Limit - Level II (15/30) - 2013/08/27 13:32:25 ET
+Table '779951772 1' 9-max Seat #2 is the button
+Seat 1: champion719 (1600 in chips) 
+Seat 2: Ty4ur$s (1405 in chips) 
+Seat 3: eimaise (1360 in chips) 
+Seat 4: Taró 38 (1040 in chips) 
+Seat 5: ms1272 (1470 in chips) 
+Seat 6: elelias01 (2750 in chips) 
+Seat 7: Ramen9 (650 in chips) 
+Seat 8: uwodropout (1430 in chips) 
+Seat 9: antimamalos (1795 in chips) 
+eimaise: posts small blind 15
+Taró 38: posts big blind 30
+*** HOLE CARDS ***
+Dealt to elelias01 [Th 7s]
+ms1272: folds 
+elelias01: folds 
+Ramen9: folds 
+uwodropout: folds 
+antimamalos: raises 30 to 60
+champion719: folds 
+Ty4ur$s: folds 
+eimaise: folds 
+Taró 38: calls 30
+*** FLOP *** [3d 6d 7c]
+Taró 38: bets 120
+antimamalos: calls 120
+*** TURN *** [3d 6d 7c] [3c]
+elelias01 is disconnected 
+Taró 38: bets 300
+antimamalos: calls 300
+*** RIVER *** [3d 6d 7c 3c] [2h]
+Taró 38: checks 
+antimamalos: bets 570
+Taró 38: calls 560 and is all-in
+Uncalled bet (10) returned to antimamalos
+*** SHOW DOWN ***
+antimamalos: shows [8h 9h] (a pair of Threes)
+Taró 38: shows [7h 4h] (two pair, Sevens and Threes)
+Taró 38 collected 2095 from pot
+*** SUMMARY ***
+Total pot 2095 | Rake 0 
+Board [3d 6d 7c 3c 2h]
+Seat 1: champion719 folded before Flop (didn't bet)
+Seat 2: Ty4ur$s (button) folded before Flop (didn't bet)
+Seat 3: eimaise (small blind) folded before Flop
+Seat 4: Taró 38 (big blind) showed [7h 4h] and won (2095) with two pair, Sevens and Threes
+Seat 5: ms1272 folded before Flop (didn't bet)
+Seat 6: elelias01 folded before Flop (didn't bet)
+Seat 7: Ramen9 folded before Flop (didn't bet)
+Seat 8: uwodropout folded before Flop (didn't bet)
+Seat 9: antimamalos showed [8h 9h] and lost with a pair of Threes
+
+
+
+PokerStars Hand #103304794656: Tournament #779951772, $3.16+$0.34 USD Hold'em No Limit - Level III (25/50) - 2013/08/27 13:34:01 ET
+Table '779951772 1' 9-max Seat #4 is the button
+Seat 1: champion719 (1600 in chips) 
+Seat 2: Ty4ur$s (1405 in chips) 
+Seat 3: eimaise (1345 in chips) 
+Seat 4: Taró 38 (2080 in chips) 
+Seat 5: ms1272 (1485 in chips) 
+Seat 6: elelias01 (2750 in chips) is sitting out
+Seat 7: Ramen9 (650 in chips) 
+Seat 8: uwodropout (1430 in chips) 
+Seat 9: antimamalos (755 in chips) 
+ms1272: posts small blind 25
+elelias01: posts big blind 50
+*** HOLE CARDS ***
+Dealt to elelias01 [8h 3c]
+Ramen9: raises 600 to 650 and is all-in
+uwodropout: folds 
+antimamalos: folds 
+champion719: folds 
+Ty4ur$s: folds 
+eimaise: folds 
+Taró 38: folds 
+elelias01 has returned
+ms1272: folds 
+elelias01: folds 
+Uncalled bet (600) returned to Ramen9
+Ramen9 collected 125 from pot
+*** SUMMARY ***
+Total pot 125 | Rake 0 
+Seat 1: champion719 folded before Flop (didn't bet)
+Seat 2: Ty4ur$s folded before Flop (didn't bet)
+Seat 3: eimaise folded before Flop (didn't bet)
+Seat 4: Taró 38 (button) folded before Flop (didn't bet)
+Seat 5: ms1272 (small blind) folded before Flop
+Seat 6: elelias01 (big blind) folded before Flop
+Seat 7: Ramen9 collected (125)
+Seat 8: uwodropout folded before Flop (didn't bet)
+Seat 9: antimamalos folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #103304818230: Tournament #779951772, $3.16+$0.34 USD Hold'em No Limit - Level III (25/50) - 2013/08/27 13:34:32 ET
+Table '779951772 1' 9-max Seat #5 is the button
+Seat 1: champion719 (1600 in chips) 
+Seat 2: Ty4ur$s (1405 in chips) 
+Seat 3: eimaise (1345 in chips) 
+Seat 4: Taró 38 (2080 in chips) 
+Seat 5: ms1272 (1460 in chips) 
+Seat 6: elelias01 (2700 in chips) 
+Seat 7: Ramen9 (725 in chips) 
+Seat 8: uwodropout (1430 in chips) 
+Seat 9: antimamalos (755 in chips) 
+elelias01: posts small blind 25
+Ramen9: posts big blind 50
+*** HOLE CARDS ***
+Dealt to elelias01 [9d 3h]
+uwodropout: folds 
+antimamalos: raises 50 to 100
+champion719: folds 
+Ty4ur$s: folds 
+eimaise: folds 
+Taró 38: folds 
+ms1272: calls 100
+elelias01: folds 
+Ramen9: folds 
+*** FLOP *** [5h Qd Jh]
+antimamalos: bets 150
+ms1272: raises 450 to 600
+antimamalos: raises 55 to 655 and is all-in
+ms1272: calls 55
+*** TURN *** [5h Qd Jh] [Ah]
+*** RIVER *** [5h Qd Jh Ah] [3c]
+*** SHOW DOWN ***
+antimamalos: shows [Ad Ac] (three of a kind, Aces)
+ms1272: shows [Jc Js] (three of a kind, Jacks)
+antimamalos collected 1585 from pot
+*** SUMMARY ***
+Total pot 1585 | Rake 0 
+Board [5h Qd Jh Ah 3c]
+Seat 1: champion719 folded before Flop (didn't bet)
+Seat 2: Ty4ur$s folded before Flop (didn't bet)
+Seat 3: eimaise folded before Flop (didn't bet)
+Seat 4: Taró 38 folded before Flop (didn't bet)
+Seat 5: ms1272 (button) showed [Jc Js] and lost with three of a kind, Jacks
+Seat 6: elelias01 (small blind) folded before Flop
+Seat 7: Ramen9 (big blind) folded before Flop
+Seat 8: uwodropout folded before Flop (didn't bet)
+Seat 9: antimamalos showed [Ad Ac] and won (1585) with three of a kind, Aces
+
+
+
+PokerStars Hand #103304855805: Tournament #779951772, $3.16+$0.34 USD Hold'em No Limit - Level III (25/50) - 2013/08/27 13:35:20 ET
+Table '779951772 1' 9-max Seat #6 is the button
+Seat 1: champion719 (1600 in chips) 
+Seat 2: Ty4ur$s (1405 in chips) 
+Seat 3: eimaise (1345 in chips) 
+Seat 4: Taró 38 (2080 in chips) 
+Seat 5: ms1272 (705 in chips) 
+Seat 6: elelias01 (2675 in chips) 
+Seat 7: Ramen9 (675 in chips) 
+Seat 8: uwodropout (1430 in chips) 
+Seat 9: antimamalos (1585 in chips) 
+Ramen9: posts small blind 25
+uwodropout: posts big blind 50
+*** HOLE CARDS ***
+Dealt to elelias01 [As Kh]
+antimamalos: folds 
+champion719: folds 
+Ty4ur$s: folds 
+eimaise: folds 
+Taró 38: raises 100 to 150
+ms1272: folds 
+elelias01: raises 100 to 250
+Ramen9: folds 
+uwodropout: folds 
+Taró 38: calls 100
+*** FLOP *** [9s 5c 6c]
+Taró 38: checks 
+elelias01: bets 250
+Taró 38: folds 
+Uncalled bet (250) returned to elelias01
+elelias01 collected 575 from pot
+elelias01: doesn't show hand 
+*** SUMMARY ***
+Total pot 575 | Rake 0 
+Board [9s 5c 6c]
+Seat 1: champion719 folded before Flop (didn't bet)
+Seat 2: Ty4ur$s folded before Flop (didn't bet)
+Seat 3: eimaise folded before Flop (didn't bet)
+Seat 4: Taró 38 folded on the Flop
+Seat 5: ms1272 folded before Flop (didn't bet)
+Seat 6: elelias01 (button) collected (575)
+Seat 7: Ramen9 (small blind) folded before Flop
+Seat 8: uwodropout (big blind) folded before Flop
+Seat 9: antimamalos folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #103304889537: Tournament #779951772, $3.16+$0.34 USD Hold'em No Limit - Level III (25/50) - 2013/08/27 13:36:04 ET
+Table '779951772 1' 9-max Seat #7 is the button
+Seat 1: champion719 (1600 in chips) 
+Seat 2: Ty4ur$s (1405 in chips) 
+Seat 3: eimaise (1345 in chips) 
+Seat 4: Taró 38 (1830 in chips) 
+Seat 5: ms1272 (705 in chips) 
+Seat 6: elelias01 (3000 in chips) 
+Seat 7: Ramen9 (650 in chips) 
+Seat 8: uwodropout (1380 in chips) 
+Seat 9: antimamalos (1585 in chips) 
+uwodropout: posts small blind 25
+antimamalos: posts big blind 50
+*** HOLE CARDS ***
+Dealt to elelias01 [9c 4d]
+champion719: folds 
+Ty4ur$s: folds 
+eimaise: folds 
+Taró 38: folds 
+ms1272: folds 
+elelias01: folds 
+Ramen9: raises 600 to 650 and is all-in
+uwodropout: folds 
+antimamalos: folds 
+Uncalled bet (600) returned to Ramen9
+Ramen9 collected 125 from pot
+*** SUMMARY ***
+Total pot 125 | Rake 0 
+Seat 1: champion719 folded before Flop (didn't bet)
+Seat 2: Ty4ur$s folded before Flop (didn't bet)
+Seat 3: eimaise folded before Flop (didn't bet)
+Seat 4: Taró 38 folded before Flop (didn't bet)
+Seat 5: ms1272 folded before Flop (didn't bet)
+Seat 6: elelias01 folded before Flop (didn't bet)
+Seat 7: Ramen9 (button) collected (125)
+Seat 8: uwodropout (small blind) folded before Flop
+Seat 9: antimamalos (big blind) folded before Flop
+
+
+
+PokerStars Hand #103304908109: Tournament #779951772, $3.16+$0.34 USD Hold'em No Limit - Level III (25/50) - 2013/08/27 13:36:28 ET
+Table '779951772 1' 9-max Seat #8 is the button
+Seat 1: champion719 (1600 in chips) 
+Seat 2: Ty4ur$s (1405 in chips) 
+Seat 3: eimaise (1345 in chips) 
+Seat 4: Taró 38 (1830 in chips) 
+Seat 5: ms1272 (705 in chips) 
+Seat 6: elelias01 (3000 in chips) 
+Seat 7: Ramen9 (725 in chips) 
+Seat 8: uwodropout (1355 in chips) 
+Seat 9: antimamalos (1535 in chips) 
+antimamalos: posts small blind 25
+champion719: posts big blind 50
+*** HOLE CARDS ***
+Dealt to elelias01 [As Jh]
+Ty4ur$s: folds 
+eimaise: folds 
+Taró 38: folds 
+ms1272: folds 
+elelias01: raises 200 to 250
+Ramen9: folds 
+uwodropout: folds 
+antimamalos: calls 225
+champion719: folds 
+*** FLOP *** [7h 8h 5s]
+antimamalos: bets 500
+elelias01: folds 
+Uncalled bet (500) returned to antimamalos
+antimamalos collected 550 from pot
+*** SUMMARY ***
+Total pot 550 | Rake 0 
+Board [7h 8h 5s]
+Seat 1: champion719 (big blind) folded before Flop
+Seat 2: Ty4ur$s folded before Flop (didn't bet)
+Seat 3: eimaise folded before Flop (didn't bet)
+Seat 4: Taró 38 folded before Flop (didn't bet)
+Seat 5: ms1272 folded before Flop (didn't bet)
+Seat 6: elelias01 folded on the Flop
+Seat 7: Ramen9 folded before Flop (didn't bet)
+Seat 8: uwodropout (button) folded before Flop (didn't bet)
+Seat 9: antimamalos (small blind) collected (550)
+
+
+
+PokerStars Hand #103304943862: Tournament #779951772, $3.16+$0.34 USD Hold'em No Limit - Level III (25/50) - 2013/08/27 13:37:14 ET
+Table '779951772 1' 9-max Seat #9 is the button
+Seat 1: champion719 (1550 in chips) 
+Seat 2: Ty4ur$s (1405 in chips) 
+Seat 3: eimaise (1345 in chips) 
+Seat 4: Taró 38 (1830 in chips) 
+Seat 5: ms1272 (705 in chips) 
+Seat 6: elelias01 (2750 in chips) 
+Seat 7: Ramen9 (725 in chips) 
+Seat 8: uwodropout (1355 in chips) 
+Seat 9: antimamalos (1835 in chips) 
+champion719: posts small blind 25
+Ty4ur$s: posts big blind 50
+*** HOLE CARDS ***
+Dealt to elelias01 [Td 9s]
+eimaise: folds 
+Taró 38: folds 
+ms1272: folds 
+elelias01: calls 50
+Ramen9: folds 
+uwodropout: folds 
+antimamalos: calls 50
+champion719: calls 25
+Ty4ur$s: checks 
+*** FLOP *** [9h Kh Jc]
+champion719: bets 150
+Ty4ur$s: folds 
+elelias01: raises 150 to 300
+antimamalos: calls 300
+champion719: folds 
+*** TURN *** [9h Kh Jc] [7d]
+elelias01: checks 
+antimamalos: checks 
+*** RIVER *** [9h Kh Jc 7d] [Qd]
+elelias01: checks 
+antimamalos: checks 
+*** SHOW DOWN ***
+elelias01: shows [Td 9s] (a straight, Nine to King)
+antimamalos: mucks hand 
+elelias01 collected 950 from pot
+*** SUMMARY ***
+Total pot 950 | Rake 0 
+Board [9h Kh Jc 7d Qd]
+Seat 1: champion719 (small blind) folded on the Flop
+Seat 2: Ty4ur$s (big blind) folded on the Flop
+Seat 3: eimaise folded before Flop (didn't bet)
+Seat 4: Taró 38 folded before Flop (didn't bet)
+Seat 5: ms1272 folded before Flop (didn't bet)
+Seat 6: elelias01 showed [Td 9s] and won (950) with a straight, Nine to King
+Seat 7: Ramen9 folded before Flop (didn't bet)
+Seat 8: uwodropout folded before Flop (didn't bet)
+Seat 9: antimamalos (button) mucked [6h 7h]
+
+
+
+PokerStars Hand #103305001102: Tournament #779951772, $3.16+$0.34 USD Hold'em No Limit - Level III (25/50) - 2013/08/27 13:38:27 ET
+Table '779951772 1' 9-max Seat #1 is the button
+Seat 1: champion719 (1350 in chips) 
+Seat 2: Ty4ur$s (1355 in chips) 
+Seat 3: eimaise (1345 in chips) 
+Seat 4: Taró 38 (1830 in chips) 
+Seat 5: ms1272 (705 in chips) 
+Seat 6: elelias01 (3350 in chips) 
+Seat 7: Ramen9 (725 in chips) 
+Seat 8: uwodropout (1355 in chips) 
+Seat 9: antimamalos (1485 in chips) 
+Ty4ur$s: posts small blind 25
+eimaise: posts big blind 50
+*** HOLE CARDS ***
+Dealt to elelias01 [8s Kd]
+Taró 38: folds 
+ms1272: folds 
+elelias01: folds 
+Ramen9: raises 675 to 725 and is all-in
+uwodropout: folds 
+antimamalos: folds 
+champion719: folds 
+Ty4ur$s: folds 
+eimaise: folds 
+Uncalled bet (675) returned to Ramen9
+Ramen9 collected 125 from pot
+*** SUMMARY ***
+Total pot 125 | Rake 0 
+Seat 1: champion719 (button) folded before Flop (didn't bet)
+Seat 2: Ty4ur$s (small blind) folded before Flop
+Seat 3: eimaise (big blind) folded before Flop
+Seat 4: Taró 38 folded before Flop (didn't bet)
+Seat 5: ms1272 folded before Flop (didn't bet)
+Seat 6: elelias01 folded before Flop (didn't bet)
+Seat 7: Ramen9 collected (125)
+Seat 8: uwodropout folded before Flop (didn't bet)
+Seat 9: antimamalos folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #103305033497: Tournament #779951772, $3.16+$0.34 USD Hold'em No Limit - Level IV (50/100) - 2013/08/27 13:39:09 ET
+Table '779951772 1' 9-max Seat #2 is the button
+Seat 1: champion719 (1350 in chips) 
+Seat 2: Ty4ur$s (1330 in chips) 
+Seat 3: eimaise (1295 in chips) 
+Seat 4: Taró 38 (1830 in chips) 
+Seat 5: ms1272 (705 in chips) 
+Seat 6: elelias01 (3350 in chips) 
+Seat 7: Ramen9 (800 in chips) 
+Seat 8: uwodropout (1355 in chips) 
+Seat 9: antimamalos (1485 in chips) 
+eimaise: posts small blind 50
+Taró 38: posts big blind 100
+*** HOLE CARDS ***
+Dealt to elelias01 [Qd 9s]
+ms1272: folds 
+elelias01: folds 
+Ramen9: folds 
+uwodropout: folds 
+antimamalos: raises 100 to 200
+champion719: folds 
+Ty4ur$s: folds 
+eimaise: folds 
+Taró 38: calls 100
+*** FLOP *** [7c 7s 5c]
+Taró 38: checks 
+antimamalos: bets 200
+Taró 38: folds 
+Uncalled bet (200) returned to antimamalos
+antimamalos collected 450 from pot
+*** SUMMARY ***
+Total pot 450 | Rake 0 
+Board [7c 7s 5c]
+Seat 1: champion719 folded before Flop (didn't bet)
+Seat 2: Ty4ur$s (button) folded before Flop (didn't bet)
+Seat 3: eimaise (small blind) folded before Flop
+Seat 4: Taró 38 (big blind) folded on the Flop
+Seat 5: ms1272 folded before Flop (didn't bet)
+Seat 6: elelias01 folded before Flop (didn't bet)
+Seat 7: Ramen9 folded before Flop (didn't bet)
+Seat 8: uwodropout folded before Flop (didn't bet)
+Seat 9: antimamalos collected (450)
+
+
+
+PokerStars Hand #103305063180: Tournament #779951772, $3.16+$0.34 USD Hold'em No Limit - Level IV (50/100) - 2013/08/27 13:39:47 ET
+Table '779951772 1' 9-max Seat #3 is the button
+Seat 1: champion719 (1350 in chips) 
+Seat 2: Ty4ur$s (1330 in chips) 
+Seat 3: eimaise (1245 in chips) 
+Seat 4: Taró 38 (1630 in chips) 
+Seat 5: ms1272 (705 in chips) 
+Seat 6: elelias01 (3350 in chips) 
+Seat 7: Ramen9 (800 in chips) 
+Seat 8: uwodropout (1355 in chips) 
+Seat 9: antimamalos (1735 in chips) 
+Taró 38: posts small blind 50
+ms1272: posts big blind 100
+*** HOLE CARDS ***
+Dealt to elelias01 [5h 5c]
+elelias01: raises 200 to 300
+Ramen9: folds 
+uwodropout: folds 
+antimamalos: folds 
+champion719: folds 
+Ty4ur$s: folds 
+eimaise: folds 
+Taró 38: folds 
+ms1272: folds 
+Uncalled bet (200) returned to elelias01
+elelias01 collected 250 from pot
+elelias01: doesn't show hand 
+*** SUMMARY ***
+Total pot 250 | Rake 0 
+Seat 1: champion719 folded before Flop (didn't bet)
+Seat 2: Ty4ur$s folded before Flop (didn't bet)
+Seat 3: eimaise (button) folded before Flop (didn't bet)
+Seat 4: Taró 38 (small blind) folded before Flop
+Seat 5: ms1272 (big blind) folded before Flop
+Seat 6: elelias01 collected (250)
+Seat 7: Ramen9 folded before Flop (didn't bet)
+Seat 8: uwodropout folded before Flop (didn't bet)
+Seat 9: antimamalos folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #103305094722: Tournament #779951772, $3.16+$0.34 USD Hold'em No Limit - Level IV (50/100) - 2013/08/27 13:40:28 ET
+Table '779951772 1' 9-max Seat #4 is the button
+Seat 1: champion719 (1350 in chips) 
+Seat 2: Ty4ur$s (1330 in chips) 
+Seat 3: eimaise (1245 in chips) 
+Seat 4: Taró 38 (1580 in chips) 
+Seat 5: ms1272 (605 in chips) 
+Seat 6: elelias01 (3500 in chips) 
+Seat 7: Ramen9 (800 in chips) 
+Seat 8: uwodropout (1355 in chips) 
+Seat 9: antimamalos (1735 in chips) 
+ms1272: posts small blind 50
+elelias01: posts big blind 100
+*** HOLE CARDS ***
+Dealt to elelias01 [Jd 9d]
+Ramen9: folds 
+uwodropout: folds 
+antimamalos: folds 
+champion719: raises 100 to 200
+Ty4ur$s: folds 
+eimaise: folds 
+Taró 38: folds 
+ms1272: folds 
+elelias01: calls 100
+*** FLOP *** [4s Qs 2c]
+elelias01: checks 
+champion719: bets 200
+elelias01: calls 200
+*** TURN *** [4s Qs 2c] [8d]
+elelias01: checks 
+champion719: bets 300
+elelias01: calls 300
+*** RIVER *** [4s Qs 2c 8d] [9h]
+elelias01: bets 400
+champion719: raises 250 to 650 and is all-in
+elelias01: calls 250
+*** SHOW DOWN ***
+champion719: shows [Qh As] (a pair of Queens)
+elelias01: shows [Jd 9d] (a pair of Nines)
+champion719 collected 2750 from pot
+*** SUMMARY ***
+Total pot 2750 | Rake 0 
+Board [4s Qs 2c 8d 9h]
+Seat 1: champion719 showed [Qh As] and won (2750) with a pair of Queens
+Seat 2: Ty4ur$s folded before Flop (didn't bet)
+Seat 3: eimaise folded before Flop (didn't bet)
+Seat 4: Taró 38 (button) folded before Flop (didn't bet)
+Seat 5: ms1272 (small blind) folded before Flop
+Seat 6: elelias01 (big blind) showed [Jd 9d] and lost with a pair of Nines
+Seat 7: Ramen9 folded before Flop (didn't bet)
+Seat 8: uwodropout folded before Flop (didn't bet)
+Seat 9: antimamalos folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #103305154722: Tournament #779951772, $3.16+$0.34 USD Hold'em No Limit - Level IV (50/100) - 2013/08/27 13:41:45 ET
+Table '779951772 1' 9-max Seat #5 is the button
+Seat 1: champion719 (2750 in chips) 
+Seat 2: Ty4ur$s (1330 in chips) 
+Seat 3: eimaise (1245 in chips) 
+Seat 4: Taró 38 (1580 in chips) 
+Seat 5: ms1272 (555 in chips) 
+Seat 6: elelias01 (2150 in chips) 
+Seat 7: Ramen9 (800 in chips) 
+Seat 8: uwodropout (1355 in chips) 
+Seat 9: antimamalos (1735 in chips) 
+elelias01: posts small blind 50
+Ramen9: posts big blind 100
+*** HOLE CARDS ***
+Dealt to elelias01 [2c Ts]
+uwodropout: folds 
+antimamalos: raises 100 to 200
+champion719: folds 
+Ty4ur$s: folds 
+eimaise: folds 
+Taró 38: calls 200
+ms1272: folds 
+elelias01: folds 
+Ramen9: folds 
+*** FLOP *** [Ks 5s Ac]
+antimamalos: bets 200
+Taró 38: raises 300 to 500
+antimamalos: raises 300 to 800
+Taró 38: raises 580 to 1380 and is all-in
+antimamalos: calls 580
+*** TURN *** [Ks 5s Ac] [Jh]
+*** RIVER *** [Ks 5s Ac Jh] [7c]
+*** SHOW DOWN ***
+antimamalos: shows [Ad Qc] (a pair of Aces)
+Taró 38: shows [Tc As] (a pair of Aces - lower kicker)
+antimamalos collected 3310 from pot
+Taró 38 finished the tournament in 9th place
+*** SUMMARY ***
+Total pot 3310 | Rake 0 
+Board [Ks 5s Ac Jh 7c]
+Seat 1: champion719 folded before Flop (didn't bet)
+Seat 2: Ty4ur$s folded before Flop (didn't bet)
+Seat 3: eimaise folded before Flop (didn't bet)
+Seat 4: Taró 38 showed [Tc As] and lost with a pair of Aces
+Seat 5: ms1272 (button) folded before Flop (didn't bet)
+Seat 6: elelias01 (small blind) folded before Flop
+Seat 7: Ramen9 (big blind) folded before Flop
+Seat 8: uwodropout folded before Flop (didn't bet)
+Seat 9: antimamalos showed [Ad Qc] and won (3310) with a pair of Aces
+
+
+
+PokerStars Hand #103305200112: Tournament #779951772, $3.16+$0.34 USD Hold'em No Limit - Level IV (50/100) - 2013/08/27 13:42:43 ET
+Table '779951772 1' 9-max Seat #6 is the button
+Seat 1: champion719 (2750 in chips) 
+Seat 2: Ty4ur$s (1330 in chips) 
+Seat 3: eimaise (1245 in chips) 
+Seat 5: ms1272 (555 in chips) 
+Seat 6: elelias01 (2100 in chips) 
+Seat 7: Ramen9 (700 in chips) 
+Seat 8: uwodropout (1355 in chips) 
+Seat 9: antimamalos (3465 in chips) 
+Ramen9: posts small blind 50
+uwodropout: posts big blind 100
+*** HOLE CARDS ***
+Dealt to elelias01 [4s Ks]
+antimamalos: raises 100 to 200
+champion719: folds 
+Ty4ur$s: folds 
+eimaise: folds 
+ms1272: folds 
+elelias01: calls 200
+Ramen9: folds 
+uwodropout: folds 
+*** FLOP *** [4c 5h Tc]
+antimamalos: bets 200
+elelias01: raises 400 to 600
+antimamalos: calls 400
+*** TURN *** [4c 5h Tc] [Ad]
+antimamalos: checks 
+elelias01: bets 500
+antimamalos: raises 800 to 1300
+elelias01: folds 
+Uncalled bet (800) returned to antimamalos
+antimamalos collected 2750 from pot
+*** SUMMARY ***
+Total pot 2750 | Rake 0 
+Board [4c 5h Tc Ad]
+Seat 1: champion719 folded before Flop (didn't bet)
+Seat 2: Ty4ur$s folded before Flop (didn't bet)
+Seat 3: eimaise folded before Flop (didn't bet)
+Seat 5: ms1272 folded before Flop (didn't bet)
+Seat 6: elelias01 (button) folded on the Turn
+Seat 7: Ramen9 (small blind) folded before Flop
+Seat 8: uwodropout (big blind) folded before Flop
+Seat 9: antimamalos collected (2750)
+
+
+
+PokerStars Hand #103305238876: Tournament #779951772, $3.16+$0.34 USD Hold'em No Limit - Level IV (50/100) - 2013/08/27 13:43:33 ET
+Table '779951772 1' 9-max Seat #7 is the button
+Seat 1: champion719 (2750 in chips) 
+Seat 2: Ty4ur$s (1330 in chips) 
+Seat 3: eimaise (1245 in chips) 
+Seat 5: ms1272 (555 in chips) 
+Seat 6: elelias01 (800 in chips) 
+Seat 7: Ramen9 (650 in chips) 
+Seat 8: uwodropout (1255 in chips) 
+Seat 9: antimamalos (4915 in chips) 
+uwodropout: posts small blind 50
+antimamalos: posts big blind 100
+*** HOLE CARDS ***
+Dealt to elelias01 [Th Kc]
+champion719: folds 
+Ty4ur$s: folds 
+eimaise: folds 
+ms1272: folds 
+elelias01: raises 700 to 800 and is all-in
+Ramen9: calls 650 and is all-in
+uwodropout: raises 455 to 1255 and is all-in
+antimamalos: folds 
+Uncalled bet (455) returned to uwodropout
+*** FLOP *** [4c Qd Ks]
+*** TURN *** [4c Qd Ks] [6h]
+*** RIVER *** [4c Qd Ks 6h] [4s]
+*** SHOW DOWN ***
+uwodropout: shows [Kh Kd] (a full house, Kings full of Fours)
+elelias01: shows [Th Kc] (two pair, Kings and Fours)
+uwodropout collected 300 from side pot
+Ramen9: shows [Ad 3s] (a pair of Fours)
+uwodropout collected 2050 from main pot
+elelias01 finished the tournament in 7th place
+Ramen9 finished the tournament in 8th place
+*** SUMMARY ***
+Total pot 2350 Main pot 2050. Side pot 300. | Rake 0 
+Board [4c Qd Ks 6h 4s]
+Seat 1: champion719 folded before Flop (didn't bet)
+Seat 2: Ty4ur$s folded before Flop (didn't bet)
+Seat 3: eimaise folded before Flop (didn't bet)
+Seat 5: ms1272 folded before Flop (didn't bet)
+Seat 6: elelias01 showed [Th Kc] and lost with two pair, Kings and Fours
+Seat 7: Ramen9 (button) showed [Ad 3s] and lost with a pair of Fours
+Seat 8: uwodropout (small blind) showed [Kh Kd] and won (2350) with a full house, Kings full of Fours
+Seat 9: antimamalos (big blind) folded before Flop
+
+
+
