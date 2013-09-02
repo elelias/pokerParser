@@ -51,9 +51,14 @@ def parsePokerHands(tableName,handLines,connection):
 
 		if 'PokerStars Hand' in line:
 			newHand=True
+			#
+			#
 			#send the previous record into the DB
-			if len(parsedDict)!=0:
-				InsertPokerHandIntoDB(tableName,parsedDict, connection)
+			if pokerTableDict:
+				insertIntoTable('pokerHand',pokerTableDict,connection)
+			#
+			#
+			#
 			parsedDict.clear()
 			actionID=0
 			actionDict={}
@@ -78,8 +83,10 @@ def parsePokerHands(tableName,handLines,connection):
 		elif '*** RIVER *** ' in line:
 			handState='R'
 		elif '*** SHOW DOWN *** ' in line:
-			handState='S'		
-		pokerTableDict['handState']=handState
+			handState='S'
+		elif '*** SUMMARY ***' in line:
+			handState='Y'		
+
 		#
 		#
 		#
@@ -100,6 +107,7 @@ def parsePokerHands(tableName,handLines,connection):
 				playerInfo=extractPlayerInfoFromLine(line)
 				activePlayers.append(copy.deepcopy(playerInfo))
 				playerNameList.append(playerInfo['playerName'])
+				print 'appending',playerInfo['playerName']
 		#
 		#
 		#
@@ -117,10 +125,14 @@ def parsePokerHands(tableName,handLines,connection):
 
 				if 'small blind' in blindString:
 						SB=float(bwords[-1])	
+						POT+=SB
 				elif 'big blind' in blindString:
 						BB=float(bwords[-1])
+						POT+=BB
 				else:
 					print 'problem parsing small blind'
+		#		
+		#
 		#
 		#process the ANTE
 		if handState=='A':
@@ -135,19 +147,28 @@ def parsePokerHands(tableName,handLines,connection):
 			if (not 'posts the ante' in line) and ('posts the ante' in oldLine):
 				#done with ante
 				Ante=anteSum
+				POT+=Ante
+		#save in dictionary
+		if handState=='A' and (Ante!=-1 or BB != -1):
+			#done with the ante and blinds
+			if not 'SB' in pokerTableDict: #so that it's only done once
+				pokerTableDict['SB']=SB
+				pokerTableDict['BB']=BB
+				pokerTableDict['Ante']=Ante
+		#done with blinds
 		#
-		if (Ante!=-1 or BB != -1):
-			#
-			pokerTableDict['SB']=SB
-			pokerTableDict['BB']=BB
-			pokerTableDict['Ante']=Ante
+		#
+		#
+		#
+		#
+		#
 		#
 		#
 		#
 		#
 		#
 		#====================================
-		#process actions
+		#PROCESS ACTIONS
 		#====================================
 		if handState in 'PFTR':
 			semicln=line.find(':')
@@ -167,7 +188,7 @@ def parsePokerHands(tableName,handLines,connection):
 						validAction=False
 					#
 					#get the contribution to the pot from the action:
-					if validAction and actionDict['action'] in 'BRC':
+					if validAction and actionDict['action'] in 'BRC': #bet,raise o check
 						amount=actionDict['amount']
 						assert amount!=None
 						POT+=amount
@@ -175,7 +196,7 @@ def parsePokerHands(tableName,handLines,connection):
 						pass
 					#
 					#
-					if validAction: #is not null so it was a valid action
+					if validAction: #it's not null so it was a valid action
 						actionID+=1
 						actionDict['actionID']=actionID
 						actionDict['actionState']=handState
@@ -193,7 +214,58 @@ def parsePokerHands(tableName,handLines,connection):
 					if actionDict:
 						insertIntoTable('actions',actionDict,connection)
 			#
+		#
+		#================================
+		#PROCESS SUMMARY
+		#================================		
+		if handState=='Y':
+
+			if 'Total pot' in line:
+				potwords=line.split()
+				totalPot=potwords[2]
+				if totalPot != POT:
+					print 'the pots are different',totalPot,POT
+					raw_input('')
+				if not totalPot.isdigit():
+					print 'totaPot is not a digit'
+					assert False
+				else:
+					totalPot=float(totalPot)
+			#
+			#get the dealer,SB and BB ids
+			if 'Seat' in line:
+
+				semicln=line.find(':')
+				for position in ['(button)','(small blind)','(big blind)']:
+					if position in line:
+					
+						pos=line.find(position)
+						testName=line[semicln+2:pos-1]
+						if not testName in playerNameList:
+							print 'the name of the player was not correctly parsed',testName
+							assert False
+						else:
+							if position=='(button)':
+								DEALER_ID=copy.copy(testName)
+							elif position=='(small blind)':
+								SB_ID=copy.copy(testName)
+							elif position=='(big blind)':
+								BB_ID=copy.copy(testName)
+							else:
+								print 'position out of range'
+								assert False
+							#
+						#
+					#
+				#
+			#
+
+
 		oldLine=line
+	#
+	#
+
+
 
 
 

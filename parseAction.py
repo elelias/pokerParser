@@ -57,7 +57,21 @@ def parseAction(actionLine):
 		print 'the actionName string was',actionName
 		action=None
 
+
 	assert action!=None
+	#
+	#
+	#
+	#	
+	raiseSize=None
+	if action=='R':
+		#the structure is 'raises X to Y'
+		#with X the size of the raise
+		#and  Y the total size of the bet
+		assert actionWords[0]=='raises'
+		assert actionWords[2]=='to'
+		raiseSize=float(actionWords[1])
+		actionQuantity=float(actionWords[3])
 	#
 	#
 	#
@@ -70,6 +84,7 @@ def parseAction(actionLine):
 	actionDict['amount']=actionQuantity
 	actionDict['isAllIn']=isAllIn
 	actionDict['actingPlayer']=actingPlayer
+	actionDict['raiseSize']=raiseSize
 	return actionDict
 
 if __name__=='__main__':

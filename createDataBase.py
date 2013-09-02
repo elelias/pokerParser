@@ -20,6 +20,7 @@ def createTables():
 		sqlstring+='action VARCHAR(1), '
 		sqlstring+='isAllIn TINYINT, '		
 		sqlstring+='amount DECIMAL(6,2), '
+		sqlstring+='raiseSize DECIMAL(6,2), '
 		sqlstring+='pot DECIMAL(6,2), '
 		sqlstring+='PRIMARY KEY(handID,actionID)'	
 		sqlstring+=');'
