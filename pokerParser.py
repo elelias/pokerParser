@@ -21,7 +21,7 @@ def extractHandIDFromLine(line):
 
 	else:
 		'striping the initial #'
-		return handNumber[1:-1]
+		return int(handNumber[1:-1])
 #
 #
 def setHandStateTo(state):
@@ -61,6 +61,7 @@ def parsePokerHands(tableName,handLines,connection):
 			BB=-1.0
 			Ante=-1.0
 			anteSum=0.0
+			POT=0.0
 		else:
 			newHand=False
 
@@ -104,7 +105,6 @@ def parsePokerHands(tableName,handLines,connection):
 		#
 		#
 		#process blinds
-
 		if handState =='A':
 			if 'posts' in line and 'blind' in line:
 				part=line.partition(':')
@@ -123,7 +123,6 @@ def parsePokerHands(tableName,handLines,connection):
 					print 'problem parsing small blind'
 		#
 		#process the ANTE
-
 		if handState=='A':
 			if 'posts the ante' in line:
 				anteamount=line.split()[-1]
@@ -147,8 +146,9 @@ def parsePokerHands(tableName,handLines,connection):
 		#
 		#
 		#
-		#
+		#====================================
 		#process actions
+		#====================================
 		if handState in 'PFTR':
 			semicln=line.find(':')
 			if semicln != -1:
@@ -160,33 +160,38 @@ def parsePokerHands(tableName,handLines,connection):
 					#
 					#
 					#
-					#initialize the action dictionary
-					if not actionDict:
-						actionDict['pot']=pokerTableDict['SB']+pokerTableDict['BB']+pokerTableDict['Ante']
-					oldPot=actionDict['pot']
-
 					actionDict=parseAction(line)
-					if actionDict: #is not null so it was a valid action
+					if actionDict:
+						validAction=True
+					else:
+						validAction=False
+					#
+					#get the contribution to the pot from the action:
+					if validAction and actionDict['action'] in 'BRC':
+						amount=actionDict['amount']
+						assert amount!=None
+						POT+=amount
+					else:
+						pass
+					#
+					#
+					if validAction: #is not null so it was a valid action
 						actionID+=1
 						actionDict['actionID']=actionID
 						actionDict['actionState']=handState
+						actionDict['pot']=POT
+						actionDict['handID']=handID
 					#
 					#
 					#
-					#
-					#get the contribution to the pot from the action:
-					if actionDict['action'] in ['bet','raise','call']:
-						amount=actionDict['amount']
-						assert amount!=None
-						actionDict['pot']=oldPot+amount
-					else:
-						actionDict['pot']=oldPots
+
 					#
 					#
 					#
-					#
-					#
-					parsedDict['actionDict']=copy.deepcopy(actionDict)
+					#parsedDict['actionDict']=copy.deepcopy(actionDict)
+					#return actionDict
+					if actionDict:
+						insertIntoTable('actions',actionDict,connection)
 			#
 		oldLine=line
 

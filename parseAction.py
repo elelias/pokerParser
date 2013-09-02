@@ -28,6 +28,7 @@ def parseAction(actionLine):
 			if actionWords[0] != 'shows' and actionWords[0]!= 'doesn\'t':
 				print 'the second field of the action is not a digit in parseAction'
 				print 'the actionName is',actionName
+				actionQuantity=None
 		else:
 			actionQuantity=float(actionWords[1])
 	#
@@ -38,19 +39,19 @@ def parseAction(actionLine):
 	#call
 	#fold
 	if 'bets' in actionName:
-		action='bet'
+		action='B'
 	elif 'raises' in actionName:
-		action='raise'
+		action='R'
 	elif 'calls' in actionName:
-		action='call'
+		action='C'
 	elif 'checks' in actionName:
-		action='check'		
+		action='K'		
 	elif 'mucks' in actionName:
-		action='muck'				
+		action='M'				
 	elif 'folds' in actionName:
-		action='fold'
+		action='F'
 	elif 'shows' in actionName or 'doesn\'t' in actionName:
-		action='show'
+		action='S'
 	else:
 		print 'action unaccounted for in parseAction'
 		print 'the actionName string was',actionName
