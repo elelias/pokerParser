@@ -39,6 +39,7 @@ def insertIntoTable(tableName,tableDict,connection,verbose=False):
 	execute_string+=';'
 	#
 	#
+	#
 	if verbose:
 		print ''
 		print 'inserting into the table '+tableName
@@ -54,8 +55,14 @@ def insertIntoTable(tableName,tableDict,connection,verbose=False):
 	#raw_input()
 	#
 	#
-	cur=connection.cursor()
-	cur.execute(execute_string)
+	cur=connection.cursor()		
+	try:
+		cur.execute(execute_string)
+	except Exception as e:
+		print 'something happened',e
+		print 'the string was ',execute_string
+
+	
 	connection.commit()
 	rows=cur.fetchall()
 	for row in rows:

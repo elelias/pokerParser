@@ -14,14 +14,19 @@ def getConnectionToDataBase():
 
 def extractHandIDFromLine(line):
 	'''extracts the unique hand number from the input text'''
-	words=line.split()
-	handNumber=words[2]
-	if handNumber[0] != '#':
-		print 'GOT THE WRONG WORD IN extractHandFromLine'
 
+	start=line.find('#')
+	if start==-1:
+		print 'this line is wrong ->',line
+		assert False
+	end=line.find(':')
+
+	handNumber=line[start+1:end]
+	if not handNumber.isdigit():
+		print 'this is not a valid number',line
+		assert False
 	else:
-		'striping the initial #'
-		return int(handNumber[1:-1])
+		return int(handNumber)
 #
 #
 def setHandStateTo(state):
@@ -48,7 +53,7 @@ def extractPlayerInfoFromLine(line):
 	playerStackWords=playerStackLine.split()
 	if (not playerStackWords[0].isdigit()) or playerStackWords[2]!='chips)':
 		print 'the stack is not a number! or wrong line!'
-		print 'the line is+',playerStackLine
+		print 'the line is=',playerStackLine
 		assert False
 	else:
 		playerStack=float(playerStackWords[0])
@@ -61,24 +66,22 @@ def extractPlayerInfoFromLine(line):
 #===================================================
 #  PARSE THE POKERHANDS
 #===================================================
-def parsePokerHands(tableName,handLines,connection):
+def parsePokerHands(fileName,connection):
 
-	'''parses the info inside of line'''
-	inFile=open('ejemplo.txt','r')
-	handLines=inFile
-	'''parses a pokerhand into a series of database entries'''
+	'''parses the info inside of a file and stores it into the database'''
 
-	parsedDict={}
+	inFile=open(fileName,'r')
+
 	pokerTableDict={}
 	oldLine=''
 
 
-	for line in handLines:
+	for line in inFile:
 
 
 
 
-		if 'PokerStars Hand' in line:
+		if 'PokerStars' in line and 'Hand #' in line:
 			newHand=True
 			#
 			#
@@ -89,7 +92,6 @@ def parsePokerHands(tableName,handLines,connection):
 			#
 			#
 			#
-			parsedDict.clear()
 			actionID=0
 			actionDict={}
 			SB=None
@@ -105,6 +107,7 @@ def parsePokerHands(tableName,handLines,connection):
 
 
 		#determine the hand state (setup/preflop/flop/turn/river/showdown)
+
 		if  newHand: 
 			handState='A'
 		elif '*** HOLE CARDS ***' in line:
@@ -118,10 +121,14 @@ def parsePokerHands(tableName,handLines,connection):
 		elif '*** SHOW DOWN *** ' in line:
 			handState='S'
 		elif '*** SUMMARY ***' in line:
-			handState='Y'		
+			handState='Y'
 
 		#
 		#
+		try:
+			handState=='A'
+		except UnboundLocalError:
+			print 'fuck! , the line is ',line
 		#
 		#get handID upon start
 		if newHand:
@@ -153,14 +160,17 @@ def parsePokerHands(tableName,handLines,connection):
 					print 'problem partitioning',line
 				blindString=part[2]
 				bwords=blindString.split()
-				if not bwords[-1].isdigit():
+				whereblind=bwords.index('blind')
+				blindAmount=bwords[whereblind+1]
+				if not blindAmount.isdigit():
 					print 'problem parsing blinds'
+					print 'this happened on the line',line
 
 				if 'small blind' in blindString:
-						SB=float(bwords[-1])	
+						SB=float(blindAmount)
 						POT+=SB
 				elif 'big blind' in blindString:
-						BB=float(bwords[-1])
+						BB=float(blindAmount)
 						POT+=BB
 				else:
 					print 'problem parsing small blind'
@@ -237,13 +247,6 @@ def parsePokerHands(tableName,handLines,connection):
 						actionDict['handID']=handID
 					#
 					#
-					#
-
-					#
-					#
-					#
-					#parsedDict['actionDict']=copy.deepcopy(actionDict)
-					#return actionDict
 					if actionDict:
 						insertIntoTable('actions',actionDict,connection)
 			#
@@ -272,10 +275,12 @@ def parsePokerHands(tableName,handLines,connection):
 				for position in ['(button)','(small blind)','(big blind)']:
 					if position in line:
 					
-						pos=line.find(position)
+						pos=line.find('(')
 						testName=line[semicln+2:pos-1]
 						if not testName in playerNameList:
 							print 'the name of the player was not correctly parsed',testName
+							print 'the list of the players is',playerNameList
+							print 'and this happened in line',line
 							assert False
 						else:
 							if position=='(button)':
@@ -297,16 +302,75 @@ def parsePokerHands(tableName,handLines,connection):
 
 
 
+def parsePokerHandsFromFiles(fileList,connection):
+	'''loops over the files and calls the pokerparser for every file'''
+
+	for file in fileList:
+		parsePokerHands(file,connection)
+
+#
+#
+#
+
+def getListOfFilesFromDir(dirPath):
+	import commands as com
+	'''gets the list of history files from a certain path'''
+
+	list=com.getoutput('ls '+dirPath).split('\n')
+	for a in list:
+		if a[0]=='#':
+			list.remove(a)
+		elif a[-4:]!='.txt':
+			list.remove(a)
+	return list
 
 
-#
-#
-#
+def sanitizePath(dirtyPath):
+	'''takes care of the spaces inside a path, which ruin everything'''
+
+	
+	cleanPath=dirtyPath.replace(' ','\\ ')
+	cleanPath=cleanPath.replace('\'','\\\'')
+	cleanPath=cleanPath.replace('$','\\$')
+
+	print 'the cleanPath is now',cleanPath
+	return cleanPath
+
+	words=dirtyPath.split()
+	#print 'the words look like: ',words
+	#write a backslash at the end of every word
+
+
+	for idx,piece in enumerate(words):
+		words[idx]+='\\'
+	#
+	#remove the last backslash
+	words[-1]=words[-1][:-1]
+	#
+	#glue them
+	cleanPath=''
+	for piece in words:
+		cleanPath+=piece+' '
+	#
+
+
+	print 'the cleanPath is',cleanPath
+	return cleanPath
+
 
 if __name__=='__main__':
 	a=''
-	tableName='actions'
 	connection=getConnectionToDataBase()
 	print 'starting to parse'
-	parsePokerHands(tableName,a,connection)
+
+	dirPath='/Users/eliasron/Library/Application Support/PokerStarsEU/HandHistory/elelias01'
+	listOfFiles=getListOfFilesFromDir(sanitizePath(dirPath))
+
+	#print listOfFiles
+	for file in listOfFiles:
+		print 'dirPath is',dirPath
+		print 'the file is ',file
+		print 'so  ',dirPath+'/'+file
+		parsePokerHands(dirPath+'/'+file,connection)
+	#
 	print 'done parsing'
