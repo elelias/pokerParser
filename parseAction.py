@@ -25,7 +25,7 @@ def parseAction(actionLine):
 	actionName=actionWords[0]
 	if len(actionWords)>1:
 		if not actionWords[1].isdigit():
-			if actionWords[0] != 'shows' and actionWords[0]!= 'doesn\'t':
+			if actionWords[0] != 'shows' and actionWords[0]!= 'doesn\'t' and actionWords[0]!='mucks':
 				print 'the second field of the action is not a digit in parseAction'
 				print 'the actionName is',actionName
 				actionQuantity=None

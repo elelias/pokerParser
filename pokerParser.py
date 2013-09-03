@@ -28,18 +28,42 @@ def setHandStateTo(state):
 	'''sets the current state to the hand'''
 
 def extractPlayerInfoFromLine(line):
+	'''extracts all the info about the player from the line'''
+	#
+	#
 	if line[0:4]!='Seat':
 		print 'you fed the wrong line to extractPlayerInfoFromLine, idiot'
 	words=line.split()
 	playerNumber=words[1][:-1] #remove the semicolon
 	if words[1][-1]!=':': print 'getting the wrong number player'
-	playerName=words[2]
-	playerStack=words[3][1:] #removing the parenthesis
+	semicln=line.find(':')
+	parenth=line.find('(')
+	if not line.find('in chips'):
+		print 'the extractPlayerInfo is not going to work, wrong line'
+		assert False
+	#
+	playerName=line[semicln+2:parenth-1]
+	#
+	playerStackLine=line[parenth+1:]
+	playerStackWords=playerStackLine.split()
+	if (not playerStackWords[0].isdigit()) or playerStackWords[2]!='chips)':
+		print 'the stack is not a number! or wrong line!'
+		print 'the line is+',playerStackLine
+		assert False
+	else:
+		playerStack=float(playerStackWords[0])
 
 	return {'playerNumber':playerNumber,'playerName':playerName,'playerStack':playerStack}
 
+
+
+
+#===================================================
+#  PARSE THE POKERHANDS
+#===================================================
 def parsePokerHands(tableName,handLines,connection):
 
+	'''parses the info inside of line'''
 	inFile=open('ejemplo.txt','r')
 	handLines=inFile
 	'''parses a pokerhand into a series of database entries'''
@@ -47,13 +71,19 @@ def parsePokerHands(tableName,handLines,connection):
 	parsedDict={}
 	pokerTableDict={}
 	oldLine=''
+
+
 	for line in handLines:
+
+
+
 
 		if 'PokerStars Hand' in line:
 			newHand=True
 			#
 			#
 			#send the previous record into the DB
+			#verbose=True;
 			if pokerTableDict:
 				insertIntoTable('pokerHand',pokerTableDict,connection)
 			#
@@ -62,11 +92,14 @@ def parsePokerHands(tableName,handLines,connection):
 			parsedDict.clear()
 			actionID=0
 			actionDict={}
-			SB=-1.0
-			BB=-1.0
-			Ante=-1.0
+			SB=None
+			BB=None
+			Ante=None
 			anteSum=0.0
 			POT=0.0
+			DEALER_ID=None
+			SB_ID=None
+			BB_ID=None			
 		else:
 			newHand=False
 
@@ -107,7 +140,7 @@ def parsePokerHands(tableName,handLines,connection):
 				playerInfo=extractPlayerInfoFromLine(line)
 				activePlayers.append(copy.deepcopy(playerInfo))
 				playerNameList.append(playerInfo['playerName'])
-				print 'appending',playerInfo['playerName']
+				#print 'appending',playerInfo['playerName']
 		#
 		#
 		#
@@ -149,7 +182,7 @@ def parsePokerHands(tableName,handLines,connection):
 				Ante=anteSum
 				POT+=Ante
 		#save in dictionary
-		if handState=='A' and (Ante!=-1 or BB != -1):
+		if handState=='A' and (Ante!=None or BB != None):
 			#done with the ante and blinds
 			if not 'SB' in pokerTableDict: #so that it's only done once
 				pokerTableDict['SB']=SB
@@ -223,9 +256,8 @@ def parsePokerHands(tableName,handLines,connection):
 			if 'Total pot' in line:
 				potwords=line.split()
 				totalPot=potwords[2]
-				if totalPot != POT:
-					print 'the pots are different',totalPot,POT
-					raw_input('')
+				#if totalPot != POT:
+				#	print 'the pots are different',totalPot,POT
 				if not totalPot.isdigit():
 					print 'totaPot is not a digit'
 					assert False
@@ -233,6 +265,7 @@ def parsePokerHands(tableName,handLines,connection):
 					totalPot=float(totalPot)
 			#
 			#get the dealer,SB and BB ids
+
 			if 'Seat' in line:
 
 				semicln=line.find(':')
@@ -247,21 +280,18 @@ def parsePokerHands(tableName,handLines,connection):
 						else:
 							if position=='(button)':
 								DEALER_ID=copy.copy(testName)
-							elif position=='(small blind)':
+								pokerTableDict['DEALER_ID']=DEALER_ID								
+							if position=='(small blind)':
 								SB_ID=copy.copy(testName)
-							elif position=='(big blind)':
+								pokerTableDict['SB_ID']=SB_ID								
+							if position=='(big blind)':
 								BB_ID=copy.copy(testName)
-							else:
-								print 'position out of range'
-								assert False
-							#
-						#
-					#
-				#
-			#
-
-
+								pokerTableDict['BB_ID']=BB_ID								
+		#		
+		#
+		#
 		oldLine=line
+	#for lines
 	#
 	#
 
@@ -277,5 +307,6 @@ if __name__=='__main__':
 	a=''
 	tableName='actions'
 	connection=getConnectionToDataBase()
-	print 'yo'
+	print 'starting to parse'
 	parsePokerHands(tableName,a,connection)
+	print 'done parsing'

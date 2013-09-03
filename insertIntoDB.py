@@ -20,11 +20,11 @@ def translateValues(value):
 	return val
 
 
-def insertIntoTable(tableName,tableDict,connection):
-	'''Inserts the pokerhand info contained in tableDict inside
+def insertIntoTable(tableName,tableDict,connection,verbose=False):
+	'''Inserts the pokerhand info contained in a dictionary inside
 	the database'''
 	#insert the table
-	#the trick is to name the colums like the dict keys
+	#the trick is to name the colums after the dict keys (well, the other way around)
 	#
 	#
 	#
@@ -39,9 +39,18 @@ def insertIntoTable(tableName,tableDict,connection):
 	execute_string+=';'
 	#
 	#
-	print ''
-	print 'the string is',execute_string
-	print 
+	if verbose:
+		print ''
+		print 'inserting into the table '+tableName
+		print 'the dictionary reads: '
+		for key,value in tableDict.iteritems():
+			print '    key = ',key
+			print '    value = ',value
+		#
+		print
+		print
+		print 'the string is',execute_string
+		print 	
 	#raw_input()
 	#
 	#
