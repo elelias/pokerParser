@@ -1,4 +1,5 @@
 #
+# coding: utf-8
 # POKERSTARS ACTION PARSER
 #
 import sys

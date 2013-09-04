@@ -1,9 +1,11 @@
 #
+# coding: utf-8
 # POKERSTARS HISTORY PARSER
 #
 import sys
 import MySQLdb as mdb
 import copy
+import codecs
 from parseAction import *
 from insertIntoDB import *
 
@@ -12,21 +14,6 @@ def getConnectionToDataBase():
 	with con:
 		return con
 
-def extractHandIDFromLine(line):
-	'''extracts the unique hand number from the input text'''
-
-	start=line.find('#')
-	if start==-1:
-		print 'this line is wrong ->',line
-		assert False
-	end=line.find(':')
-
-	handNumber=line[start+1:end]
-	if not handNumber.isdigit():
-		print 'this is not a valid number',line
-		assert False
-	else:
-		return int(handNumber)
 #
 #
 def setHandStateTo(state):
@@ -63,6 +50,7 @@ def extractPlayerInfoFromLine(line):
 
 
 
+
 #===================================================
 #  PARSE THE POKERHANDS
 #===================================================
@@ -70,27 +58,31 @@ def parsePokerHands(fileName,connection):
 
 	'''parses the info inside of a file and stores it into the database'''
 
-	inFile=open(fileName,'r')
+	inFile=codecs.open(fileName,'r','utf-8')
 
-	pokerTableDict={}
+	handInfoDict={}
 	oldLine=''
-
-
+	#
+	#
+	#
 	for line in inFile:
-
-
-
-
+		#
+		#
+		#
 		if 'PokerStars' in line and 'Hand #' in line:
 			newHand=True
+		else:
+			newHand=False
+
+
+		#initialize stuff:
+		if newHand:
 			#
 			#
 			#send the previous record into the DB
 			#verbose=True;
-			if pokerTableDict:
-				insertIntoTable('pokerHand',pokerTableDict,connection)
-			#
-			#
+			if handInfoDict:
+				insertIntoTable('pokerHand',handInfoDict,connection)
 			#
 			actionID=0
 			actionDict={}
@@ -101,11 +93,12 @@ def parsePokerHands(fileName,connection):
 			POT=0.0
 			DEALER_ID=None
 			SB_ID=None
-			BB_ID=None			
-		else:
-			newHand=False
-
-
+			BB_ID=None	
+			gameType=None
+			thisHand=handInfo(line) #initializes the instance of handInfo
+		#			
+		#
+		#
 		#determine the hand state (setup/preflop/flop/turn/river/showdown)
 
 		if  newHand: 
@@ -128,15 +121,19 @@ def parsePokerHands(fileName,connection):
 		try:
 			handState=='A'
 		except UnboundLocalError:
-			print 'fuck! , the line is ',line
+			print 'fuck! the handState is not set, the line is ',line
 		#
-		#get handID upon start
+		#
+		#initialize shit on a new Hand
 		if newHand:
 			activePlayers=[]
 			playerNameList=[]
 			handID=extractHandIDFromLine(line)
 			#print 'the hand number is',handID
-			pokerTableDict['handID']=handID
+			handInfoDict['handID']=handID
+
+			handInfo=parseHandInfo(line)
+
 		#
 		#
 		#
@@ -167,11 +164,11 @@ def parsePokerHands(fileName,connection):
 					print 'this happened on the line',line
 
 				if 'small blind' in blindString:
-						SB=float(blindAmount)
-						POT+=SB
+						handInfo.SB=float(blindAmount)
+						POT+=handInfo.SB
 				elif 'big blind' in blindString:
-						BB=float(blindAmount)
-						POT+=BB
+						handInfo.BB=float(blindAmount)
+						POT+=handInfo.BB
 				else:
 					print 'problem parsing small blind'
 		#		
@@ -189,15 +186,9 @@ def parsePokerHands(fileName,connection):
 			#
 			if (not 'posts the ante' in line) and ('posts the ante' in oldLine):
 				#done with ante
-				Ante=anteSum
+				handInfo.Ante=anteSum
 				POT+=Ante
-		#save in dictionary
-		if handState=='A' and (Ante!=None or BB != None):
-			#done with the ante and blinds
-			if not 'SB' in pokerTableDict: #so that it's only done once
-				pokerTableDict['SB']=SB
-				pokerTableDict['BB']=BB
-				pokerTableDict['Ante']=Ante
+
 		#done with blinds
 		#
 		#
@@ -285,13 +276,13 @@ def parsePokerHands(fileName,connection):
 						else:
 							if position=='(button)':
 								DEALER_ID=copy.copy(testName)
-								pokerTableDict['DEALER_ID']=DEALER_ID								
+								handInfoDict['DEALER_ID']=DEALER_ID								
 							if position=='(small blind)':
 								SB_ID=copy.copy(testName)
-								pokerTableDict['SB_ID']=SB_ID								
+								handInfoDict['SB_ID']=SB_ID								
 							if position=='(big blind)':
 								BB_ID=copy.copy(testName)
-								pokerTableDict['BB_ID']=BB_ID								
+								handInfoDict['BB_ID']=BB_ID								
 		#		
 		#
 		#

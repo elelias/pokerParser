@@ -31,6 +31,7 @@ def createTables():
 
 		sqlstring='CREATE TABLE IF NOT EXISTS pokerHand('	
 		sqlstring+='handID BIGINT, '
+		sqlstring+='gameType VARCHAR(1), '		
 		sqlstring+='SB DECIMAL(10,2), '		
 		sqlstring+='BB DECIMAL(10,2), '				
 		sqlstring+='Ante DECIMAL(10,2), '	

@@ -1,5 +1,7 @@
+# coding: utf-8
 # POKERSTARS HISTORY PARSER
 #
+
 import sys
 import MySQLdb as mdb
 import copy
@@ -8,7 +10,10 @@ import copy
 
 def translateValues(value):
 	'''translates a python variable to the database language'''
+
 	if type(value)==str:
+		val='\"'+value+'\"'
+	elif type(value)==unicode:
 		val='\"'+value+'\"'
 	elif type(value)==bool:
 		val=int(value)
