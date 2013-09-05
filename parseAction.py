@@ -5,9 +5,10 @@
 import sys
 import MySQLdb as mdb
 import copy
+from isNumber import *
+from convertToDigit import *
 
-
-def parseAction(actionLine):
+def parseAction(actionLine,thisHand):
 	'''parses the action from a line of input'''
 
 	actionDict={}
@@ -25,14 +26,14 @@ def parseAction(actionLine):
 	actionQuantity=None
 	actionName=actionWords[0]
 	if len(actionWords)>1:
-		if not actionWords[1].isdigit():
-			if actionWords[0] != 'shows' and actionWords[0]!= 'doesn\'t' and actionWords[0]!='mucks':
-				print 'the second field of the action is not a digit in parseAction'
-				print 'the actionName is',actionName
-				actionQuantity=None
-		else:
-			actionQuantity=float(actionWords[1])
-	#
+
+		if not actionWords[0] in ['shows','doesn\'t','mucks','folds']:
+			actionQuantity=convertToDigit(actionWords[1],thisHand)			
+			if actionQuantity==None:
+				print 'the actionQuantity conversion did not work'
+				print 'actionWords[1] ',actionWords[1]
+				print 'the actionLine is ',actionLine
+				assert False
 	#
 	#categories:
 	#bet
@@ -46,7 +47,7 @@ def parseAction(actionLine):
 	elif 'calls' in actionName:
 		action='C'
 	elif 'checks' in actionName:
-		action='K'		
+		action='X'		
 	elif 'mucks' in actionName:
 		action='M'				
 	elif 'folds' in actionName:
@@ -71,8 +72,8 @@ def parseAction(actionLine):
 		#and  Y the total size of the bet
 		assert actionWords[0]=='raises'
 		assert actionWords[2]=='to'
-		raiseSize=float(actionWords[1])
-		actionQuantity=float(actionWords[3])
+		raiseSize=convertToDigit(actionWords[1],thisHand)
+		actionQuantity=convertToDigit(actionWords[3],thisHand)
 	#
 	#
 	#

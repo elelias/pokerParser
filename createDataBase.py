@@ -9,7 +9,7 @@ import MySQLdb as mdb
 def createTables():
 	'''creates the test table if it doesn't exist'''
 
-	con = mdb.connect('localhost', 'eliasron', '123123123', 'pokerstars');
+	con = mdb.connect('localhost', 'eliasron', '123123123', 'pokerstars',charset='utf8');
 	with con:
 		cur=con.cursor()
 		sqlstring='CREATE TABLE IF NOT EXISTS actions('
@@ -32,6 +32,7 @@ def createTables():
 		sqlstring='CREATE TABLE IF NOT EXISTS pokerHand('	
 		sqlstring+='handID BIGINT, '
 		sqlstring+='gameType VARCHAR(1), '		
+		sqlstring+='currency VARCHAR(1), '				
 		sqlstring+='SB DECIMAL(10,2), '		
 		sqlstring+='BB DECIMAL(10,2), '				
 		sqlstring+='Ante DECIMAL(10,2), '	

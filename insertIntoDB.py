@@ -38,7 +38,7 @@ def insertIntoTable(tableName,tableDict,connection,verbose=False):
 	execute_string='INSERT INTO '+tableName +' SET '
 	for key,value in tableDict.iteritems():
 		val=translateValues(value)
-		execute_string+=key+'='+str(val)+', '
+		execute_string+=key+'='+unicode(val)+', '
 	#remove the last comma and extra space:
 	execute_string=execute_string[:-2]
 	execute_string+=';'

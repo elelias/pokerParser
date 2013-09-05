@@ -6,49 +6,13 @@ import sys
 import MySQLdb as mdb
 import copy
 import codecs
+from handInfo import *
 from parseAction import *
 from insertIntoDB import *
-
-def getConnectionToDataBase():
-	con = mdb.connect('localhost', 'eliasron', '123123123', 'pokerstars');
-	with con:
-		return con
-
-#
-#
-def setHandStateTo(state):
-	'''sets the current state to the hand'''
-
-def extractPlayerInfoFromLine(line):
-	'''extracts all the info about the player from the line'''
-	#
-	#
-	if line[0:4]!='Seat':
-		print 'you fed the wrong line to extractPlayerInfoFromLine, idiot'
-	words=line.split()
-	playerNumber=words[1][:-1] #remove the semicolon
-	if words[1][-1]!=':': print 'getting the wrong number player'
-	semicln=line.find(':')
-	parenth=line.find('(')
-	if not line.find('in chips'):
-		print 'the extractPlayerInfo is not going to work, wrong line'
-		assert False
-	#
-	playerName=line[semicln+2:parenth-1]
-	#
-	playerStackLine=line[parenth+1:]
-	playerStackWords=playerStackLine.split()
-	if (not playerStackWords[0].isdigit()) or playerStackWords[2]!='chips)':
-		print 'the stack is not a number! or wrong line!'
-		print 'the line is=',playerStackLine
-		assert False
-	else:
-		playerStack=float(playerStackWords[0])
-
-	return {'playerNumber':playerNumber,'playerName':playerName,'playerStack':playerStack}
-
-
-
+from convertToDigit import *
+from isNumber import *
+from playerInfo import *
+from getConnectionToDB import *
 
 
 #===================================================
@@ -56,6 +20,7 @@ def extractPlayerInfoFromLine(line):
 #===================================================
 def parsePokerHands(fileName,connection):
 
+	#from handInfo import *
 	'''parses the info inside of a file and stores it into the database'''
 
 	inFile=codecs.open(fileName,'r','utf-8')
@@ -74,6 +39,10 @@ def parsePokerHands(fileName,connection):
 		else:
 			newHand=False
 
+		if line in ['\n', '\r\n'] and (oldLine not in ['\n', '\r\n'] ):
+			lastLine=True
+		else:
+			lastLine=False
 
 		#initialize stuff:
 		if newHand:
@@ -86,21 +55,21 @@ def parsePokerHands(fileName,connection):
 			#
 			actionID=0
 			actionDict={}
-			SB=None
-			BB=None
-			Ante=None
 			anteSum=0.0
 			POT=0.0
-			DEALER_ID=None
-			SB_ID=None
-			BB_ID=None	
 			gameType=None
 			thisHand=handInfo(line) #initializes the instance of handInfo
+
 		#			
 		#
 		#
-		#determine the hand state (setup/preflop/flop/turn/river/showdown)
-
+		if lastLine:
+			handInfoDict=thisHand.convertToDict()
+		#
+		#
+		#
+		#
+		#edetermine the hand state (setup/preflop/flop/turn/river/showdown)
 		if  newHand: 
 			handState='A'
 		elif '*** HOLE CARDS ***' in line:
@@ -128,12 +97,6 @@ def parsePokerHands(fileName,connection):
 		if newHand:
 			activePlayers=[]
 			playerNameList=[]
-			handID=extractHandIDFromLine(line)
-			#print 'the hand number is',handID
-			handInfoDict['handID']=handID
-
-			handInfo=parseHandInfo(line)
-
 		#
 		#
 		#
@@ -141,7 +104,7 @@ def parsePokerHands(fileName,connection):
 		#obtain the name of the players and their info before the round
 		if handState=='A':
 			if  line[0:4]=='Seat':				
-				playerInfo=extractPlayerInfoFromLine(line)
+				playerInfo=extractPlayerInfoFromLine(line,thisHand)
 				activePlayers.append(copy.deepcopy(playerInfo))
 				playerNameList.append(playerInfo['playerName'])
 				#print 'appending',playerInfo['playerName']
@@ -158,17 +121,17 @@ def parsePokerHands(fileName,connection):
 				blindString=part[2]
 				bwords=blindString.split()
 				whereblind=bwords.index('blind')
-				blindAmount=bwords[whereblind+1]
-				if not blindAmount.isdigit():
+				blindAmount=convertToDigit(bwords[whereblind+1],thisHand)
+				if not isNumber(blindAmount):
 					print 'problem parsing blinds'
 					print 'this happened on the line',line
 
 				if 'small blind' in blindString:
-						handInfo.SB=float(blindAmount)
-						POT+=handInfo.SB
+						thisHand.SB=float(blindAmount)
+						POT+=thisHand.SB
 				elif 'big blind' in blindString:
-						handInfo.BB=float(blindAmount)
-						POT+=handInfo.BB
+						thisHand.BB=float(blindAmount)
+						POT+=thisHand.BB
 				else:
 					print 'problem parsing small blind'
 		#		
@@ -186,8 +149,8 @@ def parsePokerHands(fileName,connection):
 			#
 			if (not 'posts the ante' in line) and ('posts the ante' in oldLine):
 				#done with ante
-				handInfo.Ante=anteSum
-				POT+=Ante
+				thisHand.Ante=anteSum
+				POT+=thisHand.Ante
 
 		#done with blinds
 		#
@@ -215,7 +178,7 @@ def parsePokerHands(fileName,connection):
 					#
 					#
 					#
-					actionDict=parseAction(line)
+					actionDict=parseAction(line,thisHand)
 					if actionDict:
 						validAction=True
 					else:
@@ -235,7 +198,7 @@ def parsePokerHands(fileName,connection):
 						actionDict['actionID']=actionID
 						actionDict['actionState']=handState
 						actionDict['pot']=POT
-						actionDict['handID']=handID
+						actionDict['handID']=thisHand.handID
 					#
 					#
 					if actionDict:
@@ -252,11 +215,9 @@ def parsePokerHands(fileName,connection):
 				totalPot=potwords[2]
 				#if totalPot != POT:
 				#	print 'the pots are different',totalPot,POT
-				if not totalPot.isdigit():
-					print 'totaPot is not a digit'
-					assert False
-				else:
-					totalPot=float(totalPot)
+				totalPot=convertToDigit(totalPot,thisHand)
+				if totalPot==None:
+					print 'the converstion of totalPot didnt work ',potwords[2]
 			#
 			#get the dealer,SB and BB ids
 
@@ -275,14 +236,12 @@ def parsePokerHands(fileName,connection):
 							assert False
 						else:
 							if position=='(button)':
-								DEALER_ID=copy.copy(testName)
-								handInfoDict['DEALER_ID']=DEALER_ID								
+								thisHand.DEALER_ID=copy.copy(testName)
 							if position=='(small blind)':
-								SB_ID=copy.copy(testName)
-								handInfoDict['SB_ID']=SB_ID								
+								thisHand.SB_ID=copy.copy(testName)
 							if position=='(big blind)':
-								BB_ID=copy.copy(testName)
-								handInfoDict['BB_ID']=BB_ID								
+								thisHand.BB_ID=copy.copy(testName)
+							
 		#		
 		#
 		#
@@ -349,6 +308,12 @@ def sanitizePath(dirtyPath):
 	return cleanPath
 
 
+
+
+
+#=====================================
+# MAIN
+#=====================================
 if __name__=='__main__':
 	a=''
 	connection=getConnectionToDataBase()

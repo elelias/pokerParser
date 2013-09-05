@@ -19,44 +19,49 @@ class handInfo:
 			assert False
 		end=line.find(':')
 
-		handNumber=line[start+1:end]
-		if not handNumber.isdigit():
+		handID=line[start+1:end]
+		if not handID.isdigit():
 			print 'this is not a valid number',line
 			assert False
 		else:
-			self.handNumber=handNumber
+			self.handID=int(handID)
 
 	def extractCurrency(self,line):
 		#get the currency and the quantity:
 		lineSplit=line.split()
-		self.gameCurrency=None
+		self.currency=None
 		for piece in lineSplit:
-			if self.gameType=='zoom':
+			#print 'analyzing'+piece
+			if self.gameType=='Z':
 				if piece[:2]=='($':
-					self.gameCurrency=='D'
-				elif piece[:2]==u'(€':
-					self.gameCurrency=='E'
+					self.currency='D'
+					#print 'yeeah'
+				elif piece[:2]=='(€':
+					self.currency='E'
 				else:
-					self.gameCurrency='U'
+					self.currency=None
 				#
 			#
-			if self.gameType=='tournament':
+			elif self.gameType=='T':
 				if piece[0:1] == '$':
-					self.gameCurrency='D'
-				elif piece[0:1]==u'€':
-					self.gameCurrency='E'
+					self.currency='D'
+				elif piece[0:1]==u'\\u20ac' or piece[0:1]=='\\xe2\\x82\\xac':
+					self.currency='E'
 				else:
-					self.gameCurrency='U'
+					self.currency=None
 				#
 			#
-			if self.gameCurrency != None:
+			if self.currency != None:
 				break
 
+		if self.currency==None:
+			print 'the currency was not parsed. The line is: ',line
+			print 'the gameType is',self.gameType
+			assert False
 
-		assert self.gameType!=None
-		assert self.gameCurrency!=None
 
 	def makeCurrencySymbol(self):
+		#print 'maing the currencySymbol with',self.currency
 		if self.currency=='D':
 			self.currencySymbol='$'
 		elif self.currency=='E':
@@ -64,11 +69,8 @@ class handInfo:
 		else:
 			self.currencySymbol=None
 
-	def initializeWithLine(self,line):
-		'''initialize'''def parseHandInfo(line):
-
+	def parseGameType(self,line):
 		'''parses the type of game from line'''
-
 		if 'Zoom' in line:
 			self.gameType='Z'
 		elif 'Tournament' in line:
@@ -76,22 +78,36 @@ class handInfo:
 		else:
 			self.gameType='unknown'
 		#
+		if self.gameType==None:
+			print 'the gameType was not parsed. The line is: ',line
+			assert False		
+	#
+	#
+	#
+	#
+	def initializeWithLine(self,line):
+		'''initialize'''
 
-		extractHandIDFromLine(line)
-		extractCurrency(line)
-		makeCurrencySymbol()
+		self.parseGameType(line)
+		self.extractHandIDFromLine(line)
+		self.extractCurrency(line)
+		self.makeCurrencySymbol()
+	#
+	#
+	#
+	#
 
 
 	def setNPlayers(self,n):
 		self.nPlayers=n
 	#
 
-	def convertToDict(inputDict={}):
+	def convertToDict(self,inputDict={}):
 		'''converts the hand to a dictionary'''
 		outDict=copy.deepcopy(inputDict)
 		outDict['currency']=self.currency
 		outDict['gameType']=self.gameType
-		outDict['handID']=self.handNumber
+		outDict['handID']=self.handID
 		outDict['SB']=self.SB
 		outDict['BB']=self.BB
 		outDict['Ante']=self.Ante
@@ -102,18 +118,18 @@ class handInfo:
 
 
 	def __init__(self,line):
-		currency=None
-		nPlayers=0
+		self.currency=None
+		self.nPlayers=0
 		self.gameType=None
-		currencySymbol=None
-		handNumber=None
-		SB=None
-		BB=None
-		Ante=None
-		SB_ID=None
-		BB_ID=None
-		DEALER_ID=None
-		initializeWithLine(line)
+		self.currencySymbol=None
+		self.handID=None
+		self.SB=None
+		self.BB=None
+		self.Ante=None
+		self.SB_ID=None
+		self.BB_ID=None
+		self.DEALER_ID=None
+		self.initializeWithLine(line)
 
 
 
