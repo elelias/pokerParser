@@ -324,9 +324,9 @@ if __name__=='__main__':
 
 	#print listOfFiles
 	for file in listOfFiles:
-		print 'dirPath is',dirPath
-		print 'the file is ',file
-		print 'so  ',dirPath+'/'+file
+		#print 'dirPath is',dirPath
+		print 'parsing the file ',file
+		#print 'so  ',dirPath+'/'+file
 		parsePokerHands(dirPath+'/'+file,connection)
 	#
 	print 'done parsing'
